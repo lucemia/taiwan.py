@@ -12,7 +12,7 @@
 #       http://my-site.com/my-blog/
 #           base_url: /my-blog/
 #           domain: my-site.com
-base_url: /
+base_url: /taiwan.py/
 domain:
 
 
