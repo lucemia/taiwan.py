@@ -1,27 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>{{ site.title }}</title>
-    {% if site.subtitle %}<subtitle>{{ site.subtitle }}</subtitle>{% endif %}
-    <link rel="alternate" href="{{ get_url(absolute = true) }}" />
-    <link rel="self" href="{{ get_url('feed.xml', true) }}" type="application/atom+xml" />
-    <id>{{ get_url(absolute = true) }}</id>
-    <updated>{{ none|date('%Y-%m-%dT%H:%M:%SZ') }}</updated>
+    <title>Python Taiwan</title>
+    <subtitle>台灣的Python社群</subtitle>
+    <link rel="alternate" href="/" />
+    <link rel="self" href="/feed.xml" type="application/atom+xml" />
+    <id>/</id>
+    <updated>2013-08-09T10:34:54Z</updated>
     
     <author>
-        <name>{{ site.author }}</name>
-        {% if site.email %}<email>{{ site.email }}</email>{% endif %}
-        <uri>{{ get_url(absolute = true) }}</uri>
+        <name>Python Taiwan</name>
+        
+        <uri>/</uri>
     </author>
     
-    {% for post in posts %}
+    
         <entry>
-            <title>{{ post.title|escape }}</title>
-            <link rel="alternate" href="{{ get_url(post.url, true) }}" type="text/html" />
-            <id>{{ get_url(post.url, true) }}</id>
-            <updated>{{ post.timestamp|date('%Y-%m-%dT%H:%M:%SZ') }}</updated>
+            <title>It works!</title>
+            <link rel="alternate" href="/2011/12/04/It-works/" type="text/html" />
+            <id>/2011/12/04/It-works/</id>
+            <updated>2011-12-04T10:19:00Z</updated>
             
-            {% if post.excerpt %}<summary type="html">{{ post.excerpt|absolutize|escape }}</summary>{% endif %}
-            <content type="html">{{ post.content|absolutize|escape }}</content>
+            
+            <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 mynt
+
+&lt;ul&gt;
+&lt;li&gt;可以放在github 上面, 每個人都可以commit, 並且進行版本控制&lt;/li&gt;
+&lt;li&gt;程式設計師嘛, 哪有 CMS 比自己的寫程式工具好用?!&lt;/li&gt;
+&lt;li&gt;靜態網站, 簡單容易自定 每個人都可以改&lt;/li&gt;
+&lt;li&gt;最喜歡 Markdown!&lt;/li&gt;
+&lt;li&gt;這是 Python寫的&lt;/li&gt;
+&lt;li&gt;支援blog 需要的功能&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;使用靜態網站的好處&lt;/li&gt;
+&lt;li&gt;PyLadies也是使用mynt寫的喔!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://markdown.tw/&#34;&gt;Markdown 中文教學&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://www.pyladies.com/&#34;&gt;PyLadies 使用mynt架的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/pyladies/pyladies&#34;&gt;原始碼&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://mynt.mirroredwhite.com/&#34;&gt;mynt 的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/Anomareh/mynt&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;加入程式碼與Syntax Highlighting很方便&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;    def test():
+        print &amp;quot;Hello World&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;網站預定的功能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;蒐集台灣地區Python 社群活動的資訊
+
+&lt;ul&gt;
+&lt;li&gt;活動紀錄, 投影片&lt;/li&gt;
+&lt;li&gt;各地社群入口&lt;/li&gt;
+&lt;li&gt;活動宣傳&lt;/li&gt;
+&lt;li&gt;台灣社群成員的Open Source計劃&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;台灣地區 Python 相關的公司與學術活動&lt;/li&gt;
+&lt;li&gt;Python世界的新聞&lt;/li&gt;
+&lt;/ul&gt;
+</content>
         </entry>
-    {% endfor %}
+    
 </feed>
