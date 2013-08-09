@@ -2,22 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Python Taiwan</title>
     <subtitle>台灣的Python社群</subtitle>
-    <link rel="alternate" href="/" />
-    <link rel="self" href="/feed.xml" type="application/atom+xml" />
-    <id>/</id>
-    <updated>2013-08-09T10:34:54Z</updated>
+    <link rel="alternate" href="http://lucemia.github.io/taiwan.py/" />
+    <link rel="self" href="http://lucemia.github.io/taiwan.py/feed.xml" type="application/atom+xml" />
+    <id>http://lucemia.github.io/taiwan.py/</id>
+    <updated>2013-08-09T14:21:54Z</updated>
     
     <author>
         <name>Python Taiwan</name>
         
-        <uri>/</uri>
+        <uri>http://lucemia.github.io/taiwan.py/</uri>
     </author>
     
     
         <entry>
             <title>It works!</title>
-            <link rel="alternate" href="/2011/12/04/It-works/" type="text/html" />
-            <id>/2011/12/04/It-works/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2011/12/04/It-works/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2011/12/04/It-works/</id>
             <updated>2011-12-04T10:19:00Z</updated>
             
             
