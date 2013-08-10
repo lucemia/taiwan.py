@@ -2,22 +2,155 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Python Taiwan</title>
     <subtitle>台灣的Python社群</subtitle>
-    <link rel="alternate" href="http://lucemia.github.io/taiwan.py/" />
-    <link rel="self" href="http://lucemia.github.io/taiwan.py/feed.xml" type="application/atom+xml" />
-    <id>http://lucemia.github.io/taiwan.py/</id>
-    <updated>2013-08-09T14:21:54Z</updated>
+    <link rel="alternate" href="/" />
+    <link rel="self" href="/feed.xml" type="application/atom+xml" />
+    <id>/</id>
+    <updated>2013-08-10T03:46:41Z</updated>
     
     <author>
         <name>Python Taiwan</name>
         
-        <uri>http://lucemia.github.io/taiwan.py/</uri>
+        <uri>/</uri>
     </author>
     
     
         <entry>
+            <title>QNAP 威聯通 徵才</title>
+            <link rel="alternate" href="/2013/07/01/qnap/" type="text/html" />
+            <id>/2013/07/01/qnap/</id>
+            <updated>2013-07-01T03:42:00Z</updated>
+            
+            
+            <content type="html">&lt;blockquote&gt;
+&lt;p&gt;目前QNAP有在徵 Python 的人才 職缺如下&lt;br&gt;
+可以請大家參考一下&lt;br&gt;
+希望有機會能網羅你們社群裡優秀的人才&lt;br&gt;
+若是對QNAP有興趣 也可以請大家上104人力銀行 搜尋”威聯通”&lt;br&gt;
+我們預計在一年內想再找100位優秀的RD人才&lt;br&gt;
+也請多多幫我們宣傳&lt;br&gt;
+若有其他需要協助的地方 也請不吝回信給我&lt;br&gt;
+或是加入我的SKYPE qnapamber  與我聯繫&lt;br&gt;
+謝謝您&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2227 - Cloud Platform Software Engineer (雲端軟體工程師/新竹)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.104.com.tw/jobbank/custjob/index.php?r=job&amp;amp;j=676547295f4b445b36373f6845433d1f2453f492b393b45262626266b3e402b2a735j55&amp;amp;jobsource=&#34;&gt;104&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2226-雲端應用軟體工程師(北市)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.104.com.tw/jobbank/custjob/index.php?r=job&amp;amp;j=64404a2d524c455c3738406946443e20846404a2c3a3c46272727276a3f312c2b826j52&amp;amp;jobsource=n104bank1&amp;amp;hotjob_chr=&#34;&gt;104&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2226-雲端儲存管理軟體工程師(北市)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.104.com.tw/jobbank/custjob/index.php?r=job&amp;amp;j=3f3d476f4f49425934353d6643413b1d0433d472937394324242424693c642928654j02&amp;amp;jobsource=n104bank1&amp;amp;hotjob_chr=&#34;&gt;104&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2226-網頁程式設計工程師(北市)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.104.com.tw/jobbank/custjob/index.php?r=job&amp;amp;j=5d3d472a4f49425934353d6643413b1d0433d472937394324242424233c642928654j00&amp;amp;jobsource=n104bank1&amp;amp;hotjob_chr=&#34;&gt;104&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>PyCon 2013</title>
+            <link rel="alternate" href="/2013/03/01/PyCon/" type="text/html" />
+            <id>/2013/03/01/PyCon/</id>
+            <updated>2013-03-01T03:33:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;測試 PyCon 2013&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 mynt
+
+&lt;ul&gt;
+&lt;li&gt;可以放在github 上面, 每個人都可以commit, 並且進行版本控制&lt;/li&gt;
+&lt;li&gt;程式設計師嘛, 哪有 CMS 比自己的寫程式工具好用?!&lt;/li&gt;
+&lt;li&gt;靜態網站, 簡單容易自定 每個人都可以改&lt;/li&gt;
+&lt;li&gt;最喜歡 Markdown!&lt;/li&gt;
+&lt;li&gt;這是 Python寫的&lt;/li&gt;
+&lt;li&gt;支援blog 需要的功能&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;使用靜態網站的好處&lt;/li&gt;
+&lt;li&gt;PyLadies也是使用mynt寫的喔!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://markdown.tw/&#34;&gt;Markdown 中文教學&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://www.pyladies.com/&#34;&gt;PyLadies 使用mynt架的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/pyladies/pyladies&#34;&gt;原始碼&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://mynt.mirroredwhite.com/&#34;&gt;mynt 的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/Anomareh/mynt&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;加入程式碼與Syntax Highlighting很方便&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;    def test():
+        print &amp;quot;Hello World&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;網站預定的功能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;蒐集台灣地區Python 社群活動的資訊
+
+&lt;ul&gt;
+&lt;li&gt;活動紀錄, 投影片&lt;/li&gt;
+&lt;li&gt;各地社群入口&lt;/li&gt;
+&lt;li&gt;活動宣傳&lt;/li&gt;
+&lt;li&gt;台灣社群成員的Open Source計劃&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;台灣地區 Python 相關的公司與學術活動&lt;/li&gt;
+&lt;li&gt;Python世界的新聞&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>MoSQL</title>
+            <link rel="alternate" href="/2012/01/01/Mosql/" type="text/html" />
+            <id>/2012/01/01/Mosql/</id>
+            <updated>2012-01-01T03:30:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 mynt
+
+&lt;ul&gt;
+&lt;li&gt;可以放在github 上面, 每個人都可以commit, 並且進行版本控制&lt;/li&gt;
+&lt;li&gt;程式設計師嘛, 哪有 CMS 比自己的寫程式工具好用?!&lt;/li&gt;
+&lt;li&gt;靜態網站, 簡單容易自定 每個人都可以改&lt;/li&gt;
+&lt;li&gt;最喜歡 Markdown!&lt;/li&gt;
+&lt;li&gt;這是 Python寫的&lt;/li&gt;
+&lt;li&gt;支援blog 需要的功能&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;使用靜態網站的好處&lt;/li&gt;
+&lt;li&gt;PyLadies也是使用mynt寫的喔!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://markdown.tw/&#34;&gt;Markdown 中文教學&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://www.pyladies.com/&#34;&gt;PyLadies 使用mynt架的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/pyladies/pyladies&#34;&gt;原始碼&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://mynt.mirroredwhite.com/&#34;&gt;mynt 的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/Anomareh/mynt&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;加入程式碼與Syntax Highlighting很方便&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;    def test():
+        print &amp;quot;Hello World&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;網站預定的功能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;蒐集台灣地區Python 社群活動的資訊
+
+&lt;ul&gt;
+&lt;li&gt;活動紀錄, 投影片&lt;/li&gt;
+&lt;li&gt;各地社群入口&lt;/li&gt;
+&lt;li&gt;活動宣傳&lt;/li&gt;
+&lt;li&gt;台灣社群成員的Open Source計劃&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;台灣地區 Python 相關的公司與學術活動&lt;/li&gt;
+&lt;li&gt;Python世界的新聞&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        </entry>
+    
+        <entry>
             <title>It works!</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2011/12/04/It-works/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2011/12/04/It-works/</id>
+            <link rel="alternate" href="/2011/12/04/It-works/" type="text/html" />
+            <id>/2011/12/04/It-works/</id>
             <updated>2011-12-04T10:19:00Z</updated>
             
             
