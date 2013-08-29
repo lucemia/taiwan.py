@@ -8,15 +8,15 @@
 
 <meta name="generator" content="mynt v0.2.3">
 
-<link rel="shortcut icon" href="/taiwan.py/assets/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
-<link rel="alternate" href="/taiwan.py/feed.xml" type="application/atom+xml">
+<link rel="alternate" href="/feed.xml" type="application/atom+xml">
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Ubuntu+Mono:400,400italic" type="text/css">
-<!-- <link rel="stylesheet" href="/taiwan.py/assets/css/screen.css" type="text/css">
-<link rel="stylesheet" href="/taiwan.py/assets/css/pygments.css" type="text/css"> -->
-<link rel="stylesheet" href="/taiwan.py/assets/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="/taiwan.py/assets/css/bootstrap-responsive.min.css" type="text/css">
+<!-- <link rel="stylesheet" href="/assets/css/screen.css" type="text/css">-->
+<link rel="stylesheet" href="/assets/css/pygments.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/bootstrap-responsive.min.css" type="text/css">
 <style type="text/css">
   body {
     padding-top: 60px;
@@ -46,14 +46,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="brand" href="/taiwan.py/">Python Taiwan</a>
+                <a class="brand" href="/">Python Taiwan</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="/taiwan.py/blogs/">Blog</a></li>
-                        <li><a href="/taiwan.py/events/">Events</a></li>
-                        <li><a href="/taiwan.py/projects/">Projects</a></li>
-                        <li><a href="/taiwan.py/jobs/">Jobs</a></li>
+                        <li><a href="/blogs/">Blog</a></li>
+                        <li><a href="/events/">Events</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/jobs/">Jobs</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -62,8 +62,8 @@
                                 <li><a href="https://www.facebook.com/groups/pythontw/?fref=ts">Facebook</a></li>
                                 <li class="divider"></li>
                                 <li class="nav-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="/archives/">Archives</a></li>
+                                <li><a href="/feed.xml">Feed</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -79,67 +79,91 @@
     <div class="item">
         <div class="item-header">
             <h1>八月份  Python For Google Cloud 聚會</h1>
-            <h6>Tuesday, August 27, 2013 <span>&raquo;</span> <a href="/taiwan.py/archives/Cloud/">Cloud</a>, <a href="/taiwan.py/archives/Google/">Google</a>, <a href="/taiwan.py/archives/taipei.py/">taipei.py</a></h6>
+            <h6>Tuesday, August 27, 2013 <span>&raquo;</span> <a href="/archives/Cloud/">Cloud</a>, <a href="/archives/Google/">Google</a>, <a href="/archives/taipei.py/">taipei.py</a>, Authored by Lucemia</h6>
         </div>
 
         <div class="item-body">
-            <p>投影片:</p>
-
-<p>Google Cloud Platform:<br>
-* Rovio&#39;s Anger Birds 是用 App Engine.<br>
-* Snapchat serve 150 millions a day<br>
-* Songpop 18TB a day with 80 millions users<br>
-* Eurovision: 歐洲的 America Idle App, 50000 requests/second with 90% &lt; 24ms<br>
-* 3 millions applications serve</p>
-
-<p>Google Compute Engine:<br>
-* everything python API<br>
-* Best Speed (MapR) 7millions dollars  -&gt; 1200 dollars<br>
-* Scale 10000 core in peek OK!<br>
-* Global Footprint (best platform for cheap price)<br>
-* Goolge Cloud Platform</p>
-
+            <p>這次的活動邀請到Google的人員來參加, 活動坐滿, 感動，樓上是Logdown的活動, 很多人走錯 XD<br>
+講題是英文的聽得有些吃力,但內容很豐富可惜沒有錄影.</p>
+<h2>有關於 Google Cloud Platform 的基本知識:</h2>
 <ul>
+<li>Rovio&#39;s Anger Birds 是用 App Engine 平台.</li>
+<li>Snapchat serve 150 millions a day</li>
+<li>Songpop 18TB a day with 80 millions users</li>
+<li>Eurovision(歐洲的 America Idle) App, 50000 requests/second with 90% &lt; 24ms</li>
+<li>3 millions applications serve</li>
+</ul>
+<h3>Google Compute Engine:</h3>
+<ul>
+<li>everything python API</li>
+<li>World Speed record (MapR) 7millions dollars  -&gt; 1200 dollars</li>
+<li>Scale 10000 core in peek OK!</li>
+<li>Global Footprint (best platform for cheap price)</li>
+<li>Goolge Cloud Platform</li>
 <li>Secure</li>
 <li>Open and Flexible(API)</li>
 <li>Consistent (no noise neighbor problem, separate operator, data, no need to defance code)</li>
 <li>Proven</li>
-<li><p>Enable an Ecosystem</p></li>
-<li><p>High Memory (db, cache)</p></li>
-<li><p>High Computation (simulation)</p></li>
-<li><p>High Disk (media server)</p></li>
-<li><p>Local Disk</p></li>
-<li><p>Persistent Disk</p></li>
-<li><p>Cloud Storage (unstructured, media files)</p></li>
-<li><p>Cloud Datastore (nosql)</p></li>
-</ul>
+<li>Enable an Ecosystem</li>
+<li>Three Type:
 
-<p>Different between EC2<br>
-* best Performance<br>
-* consistence (no noise neighbor)</p>
+<ul>
+<li>High Memory (db, cache)</li>
+<li>High Computation (simulation)</li>
+<li>High Disk (media server)</li>
+</ul></li>
+<li>Storage Type:
+
+<ul>
+<li>Local Disk</li>
+<li>Persistent Disk</li>
+<li>Cloud Storage (unstructured, media files)</li>
+<li>Cloud Datastore (nosql)</li>
+</ul></li>
+<li>GCE與EC2的差異
+
+<ul>
+<li>best Performance</li>
+<li>consistence (no noise neighbor)</li>
+</ul></li>
+<li>GCE的方便設定:
 
 <ul>
 <li>Partition network</li>
 <li>Tag instance, meta data</li>
+</ul></li>
 </ul>
-
-<p>High Performance Computing, Digital Marketing</p>
-
+<h3>High Performance Computing, Digital Marketing</h3>
 <p>Google得講者介紹 Google Cloud Platform, Google的 IaaS + PaaS 解決方案.</p>
 
 <ul>
-<li><p>Mobile Solution</p>
-<h1>Support IOS / Android</h1><h1>Scalable</h1><h1>Socal Components</h1><h1>Cloud Endpoints + AppEngine</h1><h1>Cloud Messenger</h1><h1>Memcache, Datastore</h1></li>
-<li><p>Gaming Solution</p>
-<h1>Real-time Multiplayer with Dedicated Servers</h1><h1>Use AppEngine to control the server choose</h1></li>
-<li><p>Pipeline Solution</p></li>
-<li><p>Digital Media Management and Sharing</p>
-<h1>dns for cloud storage</h1><h1>blobstore size limit</h1><h1>blobstore use appengine out network</h1><h1>cache</h1><h1>cloud storage by default</h1></li>
+<li>Mobile Solution
+
+<ul>
+<li>Support IOS / Android</li>
+<li>Scalable</li>
+<li>Socal Components</li>
+<li>Cloud Endpoints + AppEngine</li>
+<li>Cloud Messenger</li>
+<li>Memcache, Datastore</li>
+</ul></li>
+<li>Gaming Solution
+
+<ul>
+<li>Real-time Multiplayer with Dedicated Servers</li>
+<li>Use AppEngine to control the server choose</li>
+</ul></li>
+<li>Pipeline Solution</li>
+<li>Digital Media Management and Sharing
+
+<ul>
+<li>dns for cloud storage</li>
+<li>blobstore size limit</li>
+<li>blobstore use appengine out network</li>
+<li>cache</li>
+<li>cloud storage by default</li>
+</ul></li>
 </ul>
-<h1>Will the slides</h1><h1>free credit</h1>
-<p>心得:<br>
-活動坐滿, 感動<br>
-樓上是Logdown的活動, 很多人走錯 XD</p>
 
         </div>
     </div>
@@ -180,9 +204,9 @@
 
     <a href="https://github.com/lucemia/taiwan.py"><img style="background-color:transparent;position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
-    <script src="/taiwan.py/assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/taiwan.py/assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="/taiwan.py/assets/js/mynt.min.js" type="text/javascript"></script>
+    <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/mynt.min.js" type="text/javascript"></script>
 <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-dropdown.js" type="text/javascript"></script>
 </body>
 </html>

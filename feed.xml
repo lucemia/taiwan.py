@@ -2,109 +2,165 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Python Taiwan</title>
     <subtitle>台灣的Python社群</subtitle>
-    <link rel="alternate" href="http://lucemia.github.io/taiwan.py/" />
-    <link rel="self" href="http://lucemia.github.io/taiwan.py/feed.xml" type="application/atom+xml" />
-    <id>http://lucemia.github.io/taiwan.py/</id>
-    <updated>2013-08-29T04:06:52Z</updated>
+    <link rel="alternate" href="/" />
+    <link rel="self" href="/feed.xml" type="application/atom+xml" />
+    <id>/</id>
+    <updated>2013-08-29T09:54:54Z</updated>
     
     <author>
         <name>Python Taiwan</name>
         
-        <uri>http://lucemia.github.io/taiwan.py/</uri>
+        <uri>/</uri>
     </author>
     
     
         <entry>
             <title>八月份 Taipei.py 聚會</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/</id>
-            <updated>2013-08-30T03:54:00Z</updated>
+            <link rel="alternate" href="/2013/08/30/taipeipy08/" type="text/html" />
+            <id>/2013/08/30/taipeipy08/</id>
+            <updated>2013-08-30T09:12:00Z</updated>
             
             
-            <content type="html">&lt;h2&gt;Lightening Talk&lt;/h2&gt;
-&lt;p&gt;使用 Mynt 做出 Taipei.py的網站&lt;/p&gt;
-&lt;h2&gt;Python Sprint 10/5&lt;/h2&gt;
-&lt;p&gt;謝謝講者們的精彩演講!!&lt;/p&gt;
+            <content type="html">&lt;h3&gt;Lightening Talk&lt;/h3&gt;
+&lt;p&gt;如何使用 Mynt 做出 Taiwan.py的網站 &lt;a href=&#34;/2013/08/23/It-works&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;讓我們期待九月份的&lt;a href=&#34;http://www.meetup.com/Taipei-py/events/124230392/&#34;&gt;Taipei.py&lt;/a&gt;,&lt;br&gt;
-Python Sprint,&lt;br&gt;
-Django Workshop,&lt;br&gt;
-Python for Google Cloud&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what is mynt&lt;/li&gt;
+&lt;li&gt;how to use mynt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Taiwan.py&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;每個人都可以加入 (&lt;a href=&#34;https://github.com/lucemia/taiwan.py&#34;&gt;Fork me on Github&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;PyCon 2014 PR 組徵人&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;參加活動, 宣傳Python&lt;/li&gt;
+&lt;li&gt;維護 taiwan.py Website&lt;/li&gt;
+&lt;li&gt;跑腿, 想idea (做名片)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Python Sprint 10/5&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;讓大家一起加入 Python Open Source 專案&lt;/li&gt;
+&lt;li&gt;徵求專案 &lt;a href=&#34;http://registrano.com/events/1c6673&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;謝謝講者們的精彩演講!! 讓我們期待九月份的活動:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.meetup.com/Taipei-py/events/124230392/&#34;&gt;九月 Taipei.py&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Django Workshop,&lt;/li&gt;
+&lt;li&gt;Python for Google Cloud&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         </entry>
     
         <entry>
             <title>八月份  Python For Google Cloud 聚會</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/27/cloud08/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/27/cloud08/</id>
-            <updated>2013-08-27T03:54:00Z</updated>
+            <link rel="alternate" href="/2013/08/27/cloud08/" type="text/html" />
+            <id>/2013/08/27/cloud08/</id>
+            <updated>2013-08-27T09:54:00Z</updated>
             
-            <summary type="html">投影片:</summary>
-            <content type="html">&lt;p&gt;投影片:&lt;/p&gt;
-
-&lt;p&gt;Google Cloud Platform:&lt;br&gt;
-* Rovio&amp;#39;s Anger Birds 是用 App Engine.&lt;br&gt;
-* Snapchat serve 150 millions a day&lt;br&gt;
-* Songpop 18TB a day with 80 millions users&lt;br&gt;
-* Eurovision: 歐洲的 America Idle App, 50000 requests/second with 90% &amp;lt; 24ms&lt;br&gt;
-* 3 millions applications serve&lt;/p&gt;
-
-&lt;p&gt;Google Compute Engine:&lt;br&gt;
-* everything python API&lt;br&gt;
-* Best Speed (MapR) 7millions dollars  -&amp;gt; 1200 dollars&lt;br&gt;
-* Scale 10000 core in peek OK!&lt;br&gt;
-* Global Footprint (best platform for cheap price)&lt;br&gt;
-* Goolge Cloud Platform&lt;/p&gt;
-
+            <summary type="html">這次的活動邀請到Google的人員來參加, 活動坐滿, 感動，樓上是Logdown的活動, 很多人走錯 XD&lt;br&gt;
+講題是英文的聽得有些吃力,但內容很豐富可惜沒有錄影.</summary>
+            <content type="html">&lt;p&gt;這次的活動邀請到Google的人員來參加, 活動坐滿, 感動，樓上是Logdown的活動, 很多人走錯 XD&lt;br&gt;
+講題是英文的聽得有些吃力,但內容很豐富可惜沒有錄影.&lt;/p&gt;
+&lt;h2&gt;有關於 Google Cloud Platform 的基本知識:&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;Rovio&amp;#39;s Anger Birds 是用 App Engine 平台.&lt;/li&gt;
+&lt;li&gt;Snapchat serve 150 millions a day&lt;/li&gt;
+&lt;li&gt;Songpop 18TB a day with 80 millions users&lt;/li&gt;
+&lt;li&gt;Eurovision(歐洲的 America Idle) App, 50000 requests/second with 90% &amp;lt; 24ms&lt;/li&gt;
+&lt;li&gt;3 millions applications serve&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Google Compute Engine:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;everything python API&lt;/li&gt;
+&lt;li&gt;World Speed record (MapR) 7millions dollars  -&amp;gt; 1200 dollars&lt;/li&gt;
+&lt;li&gt;Scale 10000 core in peek OK!&lt;/li&gt;
+&lt;li&gt;Global Footprint (best platform for cheap price)&lt;/li&gt;
+&lt;li&gt;Goolge Cloud Platform&lt;/li&gt;
 &lt;li&gt;Secure&lt;/li&gt;
 &lt;li&gt;Open and Flexible(API)&lt;/li&gt;
 &lt;li&gt;Consistent (no noise neighbor problem, separate operator, data, no need to defance code)&lt;/li&gt;
 &lt;li&gt;Proven&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Enable an Ecosystem&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;High Memory (db, cache)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;High Computation (simulation)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;High Disk (media server)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Local Disk&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Persistent Disk&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Cloud Storage (unstructured, media files)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Cloud Datastore (nosql)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;Enable an Ecosystem&lt;/li&gt;
+&lt;li&gt;Three Type:
 
-&lt;p&gt;Different between EC2&lt;br&gt;
-* best Performance&lt;br&gt;
-* consistence (no noise neighbor)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High Memory (db, cache)&lt;/li&gt;
+&lt;li&gt;High Computation (simulation)&lt;/li&gt;
+&lt;li&gt;High Disk (media server)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Storage Type:
+
+&lt;ul&gt;
+&lt;li&gt;Local Disk&lt;/li&gt;
+&lt;li&gt;Persistent Disk&lt;/li&gt;
+&lt;li&gt;Cloud Storage (unstructured, media files)&lt;/li&gt;
+&lt;li&gt;Cloud Datastore (nosql)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GCE與EC2的差異
+
+&lt;ul&gt;
+&lt;li&gt;best Performance&lt;/li&gt;
+&lt;li&gt;consistence (no noise neighbor)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GCE的方便設定:
 
 &lt;ul&gt;
 &lt;li&gt;Partition network&lt;/li&gt;
 &lt;li&gt;Tag instance, meta data&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;High Performance Computing, Digital Marketing&lt;/p&gt;
-
+&lt;h3&gt;High Performance Computing, Digital Marketing&lt;/h3&gt;
 &lt;p&gt;Google得講者介紹 Google Cloud Platform, Google的 IaaS + PaaS 解決方案.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Mobile Solution&lt;/p&gt;
-&lt;h1&gt;Support IOS / Android&lt;/h1&gt;&lt;h1&gt;Scalable&lt;/h1&gt;&lt;h1&gt;Socal Components&lt;/h1&gt;&lt;h1&gt;Cloud Endpoints + AppEngine&lt;/h1&gt;&lt;h1&gt;Cloud Messenger&lt;/h1&gt;&lt;h1&gt;Memcache, Datastore&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Gaming Solution&lt;/p&gt;
-&lt;h1&gt;Real-time Multiplayer with Dedicated Servers&lt;/h1&gt;&lt;h1&gt;Use AppEngine to control the server choose&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Pipeline Solution&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Digital Media Management and Sharing&lt;/p&gt;
-&lt;h1&gt;dns for cloud storage&lt;/h1&gt;&lt;h1&gt;blobstore size limit&lt;/h1&gt;&lt;h1&gt;blobstore use appengine out network&lt;/h1&gt;&lt;h1&gt;cache&lt;/h1&gt;&lt;h1&gt;cloud storage by default&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;Mobile Solution
+
+&lt;ul&gt;
+&lt;li&gt;Support IOS / Android&lt;/li&gt;
+&lt;li&gt;Scalable&lt;/li&gt;
+&lt;li&gt;Socal Components&lt;/li&gt;
+&lt;li&gt;Cloud Endpoints + AppEngine&lt;/li&gt;
+&lt;li&gt;Cloud Messenger&lt;/li&gt;
+&lt;li&gt;Memcache, Datastore&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Gaming Solution
+
+&lt;ul&gt;
+&lt;li&gt;Real-time Multiplayer with Dedicated Servers&lt;/li&gt;
+&lt;li&gt;Use AppEngine to control the server choose&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Pipeline Solution&lt;/li&gt;
+&lt;li&gt;Digital Media Management and Sharing
+
+&lt;ul&gt;
+&lt;li&gt;dns for cloud storage&lt;/li&gt;
+&lt;li&gt;blobstore size limit&lt;/li&gt;
+&lt;li&gt;blobstore use appengine out network&lt;/li&gt;
+&lt;li&gt;cache&lt;/li&gt;
+&lt;li&gt;cloud storage by default&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Will the slides&lt;/h1&gt;&lt;h1&gt;free credit&lt;/h1&gt;
-&lt;p&gt;心得:&lt;br&gt;
-活動坐滿, 感動&lt;br&gt;
-樓上是Logdown的活動, 很多人走錯 XD&lt;/p&gt;
 </content>
         </entry>
     
         <entry>
+            <title>Python Taiwan Sprint</title>
+            <link rel="alternate" href="/2013/08/26/sprint/" type="text/html" />
+            <id>/2013/08/26/sprint/</id>
+            <updated>2013-08-26T04:12:00Z</updated>
+            
+            
+            <content type="html"></content>
+        </entry>
+    
+        <entry>
             <title>It works!</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/23/It-works/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/23/It-works/</id>
-            <updated>2013-08-23T00:28:00Z</updated>
+            <link rel="alternate" href="/2013/08/23/It-works/" type="text/html" />
+            <id>/2013/08/23/It-works/</id>
+            <updated>2013-08-23T09:32:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
@@ -112,33 +168,37 @@ Python for Google Cloud&lt;/p&gt;
 &lt;li&gt;使用 mynt
 
 &lt;ul&gt;
-&lt;li&gt;it works!&lt;/li&gt;
-&lt;li&gt;可以放在git 上面, 每個人都可以commit, 並且進行版本控制.&lt;/li&gt;
-&lt;li&gt;程式設計師, 沒有 CMS 比自己的寫程式工具更好用!!&lt;/li&gt;
-&lt;li&gt;靜態網站, 簡單容易自定, 每個人都可以改 (jinja2)&lt;/li&gt;
-&lt;li&gt;最喜歡 Markdown!!&lt;/li&gt;
-&lt;li&gt;mynt 是 Python寫的 (PyLadies 也適用 myn)&lt;/li&gt;
-&lt;li&gt;支援blog 需要的功能, 並且容易擴充&lt;/li&gt;
-&lt;li&gt;靜態網站很方便管理&lt;/li&gt;
+&lt;li&gt;mynt 是 Python寫的靜態網頁生成器(PyLadies 也是用 mynt)&lt;/li&gt;
+&lt;li&gt;it just works!&lt;/li&gt;
+&lt;li&gt;只需要會Markdown就可以寫&lt;/li&gt;
+&lt;li&gt;支援需要的功能(blog與頁面), 並且容易學(&amp;lt; 1hr), 容易擴充&lt;/li&gt;
+&lt;li&gt;可以放在github上面, 每個人都可以commit, 直接用git做版本控制.&lt;/li&gt;
+&lt;li&gt;靜態網站, 什麼地方都可以host. &lt;a href=&#34;http://lucemia.github.io/taiwan.py/&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;對於程式設計師, 自己的寫程式工具(sublime)比CMS好用!!&lt;/li&gt;
+&lt;li&gt;線上編輯也可以 &lt;a href=&#34;https://github.com/lucemia/taiwan.py/blob/master/_posts/2012-01-01-Mosql.md&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;簡單容易自定, 每個人都可以改 (jinja2)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://markdown.tw/&#34;&gt;Markdown 中文教學&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;http://www.pyladies.com/&#34;&gt;PyLadies 使用mynt架的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/pyladies/pyladies&#34;&gt;原始碼&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;http://mynt.mirroredwhite.com/&#34;&gt;mynt 的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/Anomareh/mynt&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;加入程式碼與Syntax Highlighting很方便&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;    def test():
-        print &amp;quot;Hello World&amp;quot;
+&lt;h2&gt;加入程式碼與Syntax Highlighting很方便&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;def test():
+  print &amp;quot;Hello World&amp;quot;
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+  test()
 &lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;網站預定的主題&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;蒐集台灣地區Python 社群活動的資訊
 
 &lt;ul&gt;
-&lt;li&gt;活動紀錄, 投影片&lt;/li&gt;
+&lt;li&gt;活動心得, 投影片, Slides &lt;a href=&#34;/2013/07/27/taipeipy07&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;各地社群入口&lt;/li&gt;
 &lt;li&gt;活動與宣傳&lt;/li&gt;
-&lt;li&gt;台灣社群成員的Open Source計劃!! &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/08/23/speedtest&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;台灣社群成員的Open Source計劃!! &lt;a href=&#34;/2013/08/23/speedtest&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;台灣地區 Python 相關的公司徵才與活動 &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/07/01/qnap&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;台灣地區 Python 相關的公司徵才與活動 &lt;a href=&#34;/2013/07/01/qnap&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Python世界的新聞&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -146,8 +206,8 @@ Python for Google Cloud&lt;/p&gt;
     
         <entry>
             <title>Server Benchmark 工具</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/23/speedtest/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/23/speedtest/</id>
+            <link rel="alternate" href="/2013/08/23/speedtest/" type="text/html" />
+            <id>/2013/08/23/speedtest/</id>
             <updated>2013-08-23T00:22:00Z</updated>
             
             
@@ -199,21 +259,21 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>七月份Taipei.py聚會</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07/</id>
+            <link rel="alternate" href="/2013/07/27/taipeipy07/" type="text/html" />
+            <id>/2013/07/27/taipeipy07/</id>
             <updated>2013-07-27T00:22:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;Visual Communication for customer electronic application with Python Blender and SAKURA board.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/PU9Ilx1Rhvw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/PU9Ilx1Rhvw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;七月的主題演講, 介紹Python Blender 這款好用的開源3D 建模工具, 以及和 Sakura board 的連接&lt;/p&gt;
 &lt;h2&gt;iPython Notebook.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/nzbiIAIxp1E&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/nzbiIAIxp1E&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;c3h3介紹如何使用iPython Notebook 快速的作出有各種轉場效果的投影片!&lt;/p&gt;
 &lt;h2&gt;Lightening Talk of Mosky.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Mosky的 Lightening Talk, 主題是Python 的 Open Source 專案&lt;br&gt;
 內容包括有 MoSQL, Clime&lt;/p&gt;
@@ -225,8 +285,8 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>QNAP 威聯通 徵才</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/07/01/qnap/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/07/01/qnap/</id>
+            <link rel="alternate" href="/2013/07/01/qnap/" type="text/html" />
+            <id>/2013/07/01/qnap/</id>
             <updated>2013-07-01T00:22:00Z</updated>
             
             
@@ -266,8 +326,8 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>PyCon 2013</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/03/01/PyCon/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/03/01/PyCon/</id>
+            <link rel="alternate" href="/2013/03/01/PyCon/" type="text/html" />
+            <id>/2013/03/01/PyCon/</id>
             <updated>2013-03-01T00:22:00Z</updated>
             
             
@@ -310,8 +370,8 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>MoSQL</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2012/01/01/Mosql/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2012/01/01/Mosql/</id>
+            <link rel="alternate" href="/2012/01/01/Mosql/" type="text/html" />
+            <id>/2012/01/01/Mosql/</id>
             <updated>2012-01-01T00:22:00Z</updated>
             
             
