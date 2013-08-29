@@ -8,60 +8,80 @@
 </head>
 
 <body>
-    <div id="container">
-        <div id="sidebar">
-            <div id="header">
-                <h1><a href="{{ get_url() }}">{{ site.title }}</a></h1>
-                {% if site.subtitle %}<h2>{{ site.subtitle }}</h2>{% endif %}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="{{ get_url() }}">{{ site.title }}</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="{{ get_url('blogs/') }}">Blog</a></li>
+                        <li><a href="{{ get_url('events/') }}">Events</a></li>
+                        <li><a href="{{ get_url('projects/') }}">Projects</a></li>
+                        <li><a href="{{ get_url('jobs/') }}">Jobs</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://python.org.tw/">Wiki</a></li>
+                                <li><a href="https://groups.google.com/forum/#!forum/pythontw">Google Group</a></li>
+                                <li><a href="https://www.facebook.com/groups/pythontw/?fref=ts">Facebook</a></li>
+                                <li class="divider"></li>
+                                <li class="nav-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
-
-            <div class="module module-nav">
-                <ul class="unstyled">
-                    <li><a href="{{ get_url() }}">Blog</a></li>
-                    <li><a href="{{ get_url('archives/') }}">Archives</a></li>
-                    <li><a href="{{ get_url('feed.xml') }}">Feed</a></li>
-                    <li><a href="{{ get_url('projects/') }}">Open source projects</a></li>
-                    <li><a href="{{ get_url('events/') }}">Python Events</a></li>
-                    <li><a href="{{ get_url('jobs/')}}">Job Opportunities</a></li>
-                </ul>
-            </div>
-
-            <div class="module">
-                <p>
-                    各地的Python 社團
-                    <li><a href="">Taipei.py</a></li>
-                    <li><a href="">PyHug</a></li>
-                    <li><a href="">Tainan.py</a></li>
-                </p>
-                <p>
-                    Python資源
-                    <li><a href="">IRC</a></li>
-                    <li><a href="">Google Group</a></li>
-                </p>
-                <h1>距離PyCon 2014 還有300天</h1>
-                <p>This is also a good place to list any other sites you are on like <a href="https://github.com/">GitHub</a> and <a href="https://twitter.com/">Twitter</a>.</p>
-                <p><code>/_templates/layout.html#L26-30</code></p>
-            </div>
-
-            <div id="footer">
-                <p>{% if site.author %}&copy; {{ none|date('%Y') }} {{ site.author }} &ndash; {% endif %}powered by <a href="http://mynt.mirroredwhite.com/">mynt</a></p>
-            </div>
-        </div>
-
-        {% block breadcrumbs %}{% endblock %}
-
-        <div id="content">
-            {% block content %}{% endblock %}
         </div>
     </div>
-    <a href="https://github.com/lucemia/taiwan.py"><img style="background-color:transparent;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-    <iframe style="right:0px;position:absolute" width="225" height="570" src="http://meetu.ps/1YJB0n" frameborder="0"></iframe>
-    <<!-- form action="http://www.newsleopard.com/mailverify.htm?x=8a2acf2c40b8e4430140c767beb04f50"
-        style="border:1px solid #ccc;padding:3px;text-align:center;width:300px"
-        target="popupwindow" method="post"
-        onsubmit="window.open('', 'popupwindow', 'scrollbars=yes,width=350,height=115');return true">
-    <p>請輸入您的Email:</p><p><input style="width:140px" name="email" type="text"/></p>
-        <input value="訂閱" type="submit"/>
-</form> -->
+    <div class="container">
+        <div class="row">
+            {% block breadcrumb %} {% endblock %}
+            <div id="content" class="span8">
+                {% block content %}{% endblock %}
+            </div>
+            <div id="sidebar" class="span4">
+                 <iframe width="225" height="300" src="http://meetu.ps/1YJB0n" frameborder="0"></iframe>
+                 <form action="http://www.newsleopard.com/mailverify.htm?x=8a2acf2c40b8e4430140c767beb04f50" target="popupwindow" method="post" onsubmit="window.open('', 'popupwindow', 'scrollbars=yes,width=350,height=115');return true">
+                    <input name="email" type="text"/><br/>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <h2>Taipei.py</h2>
+                    <p>活動於台北周邊的 Python 玩家，歡迎來玩！</p>
+                    <p><a class="btn" href="http://taipei.python.org.tw/">View details &raquo;</a></p>
+                </div>
+                <div class="span4">
+                    <h2>PyHug</h2>
+                    <p>活動於新竹周邊的 Python 程式員。非常歡迎你加入我們的聚會！</p>
+                    <p><a class="btn" href="http://www.meetup.com/pythonhug/">View details &raquo;</a></p>
+                </div>
+                <div class="span4">
+                    <h2>Tainan.py</h2>
+                    <p>活動於台南周邊的 Python 人客，歡迎來吃！</p>
+                    <p><a class="btn" href="http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/">View details &raquo;</a></p>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; Python Taiwan 2013</p>
+        </div> <!-- /container -->
+    </footer>
+
+    <a href="https://github.com/lucemia/taiwan.py"><img style="background-color:transparent;position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+    {% include 'page.footer.html' %}
 </body>
 </html>
