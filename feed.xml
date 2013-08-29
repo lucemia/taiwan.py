@@ -2,27 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Python Taiwan</title>
     <subtitle>台灣的Python社群</subtitle>
-    <link rel="alternate" href="/" />
-    <link rel="self" href="/feed.xml" type="application/atom+xml" />
-    <id>/</id>
-    <updated>2013-08-29T09:54:54Z</updated>
+    <link rel="alternate" href="http://lucemia.github.io/taiwan.py/" />
+    <link rel="self" href="http://lucemia.github.io/taiwan.py/feed.xml" type="application/atom+xml" />
+    <id>http://lucemia.github.io/taiwan.py/</id>
+    <updated>2013-08-29T09:56:26Z</updated>
     
     <author>
         <name>Python Taiwan</name>
         
-        <uri>/</uri>
+        <uri>http://lucemia.github.io/taiwan.py/</uri>
     </author>
     
     
         <entry>
             <title>八月份 Taipei.py 聚會</title>
-            <link rel="alternate" href="/2013/08/30/taipeipy08/" type="text/html" />
-            <id>/2013/08/30/taipeipy08/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/</id>
             <updated>2013-08-30T09:12:00Z</updated>
             
             
             <content type="html">&lt;h3&gt;Lightening Talk&lt;/h3&gt;
-&lt;p&gt;如何使用 Mynt 做出 Taiwan.py的網站 &lt;a href=&#34;/2013/08/23/It-works&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如何使用 Mynt 做出 Taiwan.py的網站 &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/08/23/It-works&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;what is mynt&lt;/li&gt;
@@ -56,8 +56,8 @@
     
         <entry>
             <title>八月份  Python For Google Cloud 聚會</title>
-            <link rel="alternate" href="/2013/08/27/cloud08/" type="text/html" />
-            <id>/2013/08/27/cloud08/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/27/cloud08/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/08/27/cloud08/</id>
             <updated>2013-08-27T09:54:00Z</updated>
             
             <summary type="html">這次的活動邀請到Google的人員來參加, 活動坐滿, 感動，樓上是Logdown的活動, 很多人走錯 XD&lt;br&gt;
@@ -148,8 +148,8 @@
     
         <entry>
             <title>Python Taiwan Sprint</title>
-            <link rel="alternate" href="/2013/08/26/sprint/" type="text/html" />
-            <id>/2013/08/26/sprint/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/26/sprint/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/08/26/sprint/</id>
             <updated>2013-08-26T04:12:00Z</updated>
             
             
@@ -158,8 +158,8 @@
     
         <entry>
             <title>It works!</title>
-            <link rel="alternate" href="/2013/08/23/It-works/" type="text/html" />
-            <id>/2013/08/23/It-works/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/23/It-works/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/08/23/It-works/</id>
             <updated>2013-08-23T09:32:00Z</updated>
             
             
@@ -193,12 +193,12 @@ if __name__ == &amp;quot;__main__&amp;quot;:
 &lt;li&gt;蒐集台灣地區Python 社群活動的資訊
 
 &lt;ul&gt;
-&lt;li&gt;活動心得, 投影片, Slides &lt;a href=&#34;/2013/07/27/taipeipy07&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;活動心得, 投影片, Slides &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;各地社群入口&lt;/li&gt;
 &lt;li&gt;活動與宣傳&lt;/li&gt;
-&lt;li&gt;台灣社群成員的Open Source計劃!! &lt;a href=&#34;/2013/08/23/speedtest&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;台灣社群成員的Open Source計劃!! &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/08/23/speedtest&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;台灣地區 Python 相關的公司徵才與活動 &lt;a href=&#34;/2013/07/01/qnap&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;台灣地區 Python 相關的公司徵才與活動 &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/07/01/qnap&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Python世界的新聞&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -206,8 +206,8 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
         <entry>
             <title>Server Benchmark 工具</title>
-            <link rel="alternate" href="/2013/08/23/speedtest/" type="text/html" />
-            <id>/2013/08/23/speedtest/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/23/speedtest/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/08/23/speedtest/</id>
             <updated>2013-08-23T00:22:00Z</updated>
             
             
@@ -259,21 +259,21 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>七月份Taipei.py聚會</title>
-            <link rel="alternate" href="/2013/07/27/taipeipy07/" type="text/html" />
-            <id>/2013/07/27/taipeipy07/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07/</id>
             <updated>2013-07-27T00:22:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;Visual Communication for customer electronic application with Python Blender and SAKURA board.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/PU9Ilx1Rhvw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/PU9Ilx1Rhvw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;七月的主題演講, 介紹Python Blender 這款好用的開源3D 建模工具, 以及和 Sakura board 的連接&lt;/p&gt;
 &lt;h2&gt;iPython Notebook.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/nzbiIAIxp1E&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/nzbiIAIxp1E&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;c3h3介紹如何使用iPython Notebook 快速的作出有各種轉場效果的投影片!&lt;/p&gt;
 &lt;h2&gt;Lightening Talk of Mosky.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Mosky的 Lightening Talk, 主題是Python 的 Open Source 專案&lt;br&gt;
 內容包括有 MoSQL, Clime&lt;/p&gt;
@@ -285,8 +285,8 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>QNAP 威聯通 徵才</title>
-            <link rel="alternate" href="/2013/07/01/qnap/" type="text/html" />
-            <id>/2013/07/01/qnap/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/07/01/qnap/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/07/01/qnap/</id>
             <updated>2013-07-01T00:22:00Z</updated>
             
             
@@ -326,8 +326,8 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>PyCon 2013</title>
-            <link rel="alternate" href="/2013/03/01/PyCon/" type="text/html" />
-            <id>/2013/03/01/PyCon/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/03/01/PyCon/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/03/01/PyCon/</id>
             <updated>2013-03-01T00:22:00Z</updated>
             
             
@@ -370,8 +370,8 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>MoSQL</title>
-            <link rel="alternate" href="/2012/01/01/Mosql/" type="text/html" />
-            <id>/2012/01/01/Mosql/</id>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2012/01/01/Mosql/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2012/01/01/Mosql/</id>
             <updated>2012-01-01T00:22:00Z</updated>
             
             
