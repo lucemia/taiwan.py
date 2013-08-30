@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://lucemia.github.io/taiwan.py/" />
     <link rel="self" href="http://lucemia.github.io/taiwan.py/feed.xml" type="application/atom+xml" />
     <id>http://lucemia.github.io/taiwan.py/</id>
-    <updated>2013-08-29T09:56:26Z</updated>
+    <updated>2013-08-30T02:04:00Z</updated>
     
     <author>
         <name>Python Taiwan</name>
@@ -18,30 +18,176 @@
             <title>八月份 Taipei.py 聚會</title>
             <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/" type="text/html" />
             <id>http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/</id>
-            <updated>2013-08-30T09:12:00Z</updated>
+            <updated>2013-08-30T13:12:00Z</updated>
             
             
-            <content type="html">&lt;h3&gt;Lightening Talk&lt;/h3&gt;
-&lt;p&gt;如何使用 Mynt 做出 Taiwan.py的網站 &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/08/23/It-works&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+            <content type="html">&lt;h3&gt;Python Sprint 10/5 by Tim&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PyCon 要辦 Sprint了, 讓大家一起加入 Python Open Source 專案的世界, 一起修Issue!!&lt;/li&gt;
+&lt;li&gt;徵求專案, 歡迎已經有一定規模的專案 &lt;a href=&#34;http://registrano.com/events/1c6673&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;主題演講: CPython 原始碼解析 by 果凍&lt;/h3&gt;&lt;h4&gt;PUT SLIDES HERE&lt;/h4&gt;&lt;h4&gt;PUT VIDEO HERE&lt;/h4&gt;
+&lt;p&gt;這次我要演講的主題是 CPython 如何執行 python code，焦點主要是放在 vm 部分。目前暫無考慮編譯部分。因為是講較底層的東西，因此整個演講會有不少有關 C 語言的東西。另外，也會示範如何利用 gdb 來 了解 python 運作。示範環境在 ubuntu 下。&lt;/p&gt;
+
+&lt;p&gt;演講大綱:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;what is mynt&lt;/li&gt;
-&lt;li&gt;how to use mynt&lt;/li&gt;
+&lt;li&gt;code object 與 frame object 簡介&lt;/li&gt;
+&lt;li&gt;cpython op code 簡介&lt;/li&gt;
+&lt;li&gt;示範如何利用 gdb 來幫助我們了解 python 執行&lt;/li&gt;
+&lt;li&gt;cpython 如何執行 op code&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Taiwan.py&lt;/h3&gt;
+
+&lt;p&gt;果凍示範了如何使用&lt;code&gt;dis&lt;/code&gt; module 取得 python 程式碼的 opcode. 可以更容易瞭解Python 底層的實作.&lt;/p&gt;
+
+&lt;p&gt;聽了拿來試幾個例子:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;stackoverflow 上看過(&lt;a href=&#34;http://stackoverflow.com/questions/2853683/what-is-the-preferred-syntax-for-initializing-a-dict&#34;&gt;What is the preferred syntax for initializing a dict?&lt;/a&gt;)有人討論&lt;code&gt;x = dict()&lt;/code&gt; 與 &lt;code&gt;x = {}&lt;/code&gt; 會有效能差異, 立馬來測一下&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It works for all kinds of keys, so you can, for example, say {1: &amp;#39;one&amp;#39;, 2: &amp;#39;two&amp;#39;}. The second variant only works for (some) string keys. Using different kinds of syntax depending on the type of the keys would be an unnecessary inconsistency.&lt;br&gt;
+It is faster:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;測試結果&lt;/p&gt;
+&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;$ python -m timeit &amp;quot;dict(a=&amp;#39;value&amp;#39;, another=&amp;#39;value&amp;#39;)&amp;quot;
+1000000 loops, best of 3: 0.79 usec per loop
+$ python -m timeit &amp;quot;{&amp;#39;a&amp;#39;: &amp;#39;value&amp;#39;,&amp;#39;another&amp;#39;: &amp;#39;value&amp;#39;}&amp;quot;
+1000000 loops, best of 3: 0.305 usec per loop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;實際用 dis 解析&lt;/p&gt;
+&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;import dis
+
+def x1():
+    x = dict()
+
+def x2():
+    x = {}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;dis.dis(x1)
+&amp;gt;&amp;gt;&amp;gt; dis.dis(x1)
+  2           0 LOAD_GLOBAL              0 (dict)
+              3 CALL_FUNCTION            0
+              6 STORE_FAST               0 (x)
+              9 LOAD_CONST               0 (None)
+             12 RETURN_VALUE
+
+dis.dis(x2)
+&amp;gt;&amp;gt;&amp;gt; dis.dis(x2)
+  2           0 BUILD_MAP                0
+              3 STORE_FAST               0 (x)
+              6 LOAD_CONST               0 (None)
+              9 RETURN_VALUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以看得出來很明顯的 &lt;code&gt;x = dict()&lt;/code&gt; 多執行了一行 &lt;code&gt;CALL_FUNCTION&lt;/code&gt;. 因此就可以瞭解為什麼會有額外的執行負擔.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;感覺有點肥的 &lt;code&gt;defaultdict&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;
+def x1():
+    y  =defaultdict(lambda: 0)
+    y[1] += 1
+
+def x2():
+    y = {}
+    y[1] = y.get(1, 0) + 1
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; dis.dis(x1)
+  2           0 LOAD_GLOBAL              0 (defaultdict)
+              3 LOAD_CONST               1 (&amp;lt;code object &amp;lt;lambda&amp;gt; at 0x109c45030, file &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 2&amp;gt;)
+              6 MAKE_FUNCTION            0
+              9 CALL_FUNCTION            1
+             12 STORE_FAST               0 (y)
+
+  3          15 LOAD_FAST                0 (y)
+             18 LOAD_CONST               2 (1)
+             21 DUP_TOPX                 2
+             24 BINARY_SUBSCR
+             25 LOAD_CONST               2 (1)
+             28 INPLACE_ADD
+             29 ROT_THREE
+             30 STORE_SUBSCR
+             31 LOAD_CONST               0 (None)
+             34 RETURN_VALUE
+&amp;gt;&amp;gt;&amp;gt; dis.dis(x2)
+  2           0 BUILD_MAP                0
+              3 STORE_FAST               0 (y)
+
+  3           6 LOAD_FAST                0 (y)
+              9 LOAD_ATTR                0 (get)
+             12 LOAD_CONST               1 (1)
+             15 LOAD_CONST               2 (0)
+             18 CALL_FUNCTION            2
+             21 LOAD_CONST               1 (1)
+             24 BINARY_ADD
+             25 LOAD_FAST                0 (y)
+             28 LOAD_CONST               1 (1)
+             31 STORE_SUBSCR
+             32 LOAD_CONST               0 (None)
+             35 RETURN_VALUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;對於在多種寫法中選擇時多了一些有效參考的工具.&lt;/p&gt;
+&lt;h3&gt;Lightening Talk 1 - 使用Blender和簡易的Python Script模擬出如同電影裡的GUI介面動畫^_^ by DC&lt;/h3&gt;
+&lt;p&gt;請到果凍的學弟, 一名大一新生! 來introduce Blender, 國中!時受到WANTED 的啓發開始做了第一個Blender動畫. 介紹了很多學生時代使用Blender做出來的影片, &lt;a href=&#34;http://www.youtube.com/user/DavidChen831212/videos&#34;&gt;作品集&lt;/a&gt;看起來效果很驚人! 以後學生就有能力做很好的3D動畫了!!&lt;/p&gt;
+&lt;h4&gt;PUT SLIDES HERE&lt;/h4&gt;&lt;h4&gt;About Blender:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Open source&lt;/li&gt;
+&lt;li&gt;Cross Platform&lt;/li&gt;
+&lt;li&gt;GPU-accelerated&lt;/li&gt;
+&lt;li&gt;Python Scripting Support&lt;/li&gt;
+&lt;li&gt;Official Open-Movie Projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Use python Script in Blender:&lt;/h4&gt;
+&lt;p&gt;可以透過Python Script來做一些Blender裡面不支援的動畫效果. 或是減少很多重複的工作(如focus, defocus的效果). 以及作分鏡.&lt;/p&gt;
+
+&lt;p&gt;完成的的影片 &lt;a href=&#34;&#34;&gt;All or Nothing&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Lightening Talk 2 - Taipei.py Logo 的故事 by Joe&lt;/h3&gt;
+&lt;p&gt;不辭風雨從台南上來的Joe, 帶給大家 Taipei.py Logo的故事. 太精彩了, 有機會一定要親耳聽聽看. Python Logo的故事曲折不輸&amp;quot;少年Py的奇幻漂流&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Lightening Talk 3 - mynt by David&lt;/h3&gt;&lt;h4&gt;如何使用 Mynt 做出&lt;a href=&#34;http://lucemia.github.io/taiwan.py/&#34;&gt;Taiwan.py&lt;/a&gt;的網站 &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/08/23/It-works&#34;&gt;link&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;很好寫, 聽完Taipei.py 的活動就寫完了 (比什麼Log什麼Down還好寫!)&lt;/li&gt;
+&lt;li&gt;大家加入一起寫! (聽眾心得, 講者補充&amp;hellip; etc)&lt;/li&gt;
+&lt;li&gt;what is mynt&lt;/li&gt;
+&lt;li&gt;how to use mynt
+
+&lt;ul&gt;
+&lt;li&gt;usage (&lt;code&gt;mynt watch&lt;/code&gt;, &lt;code&gt;mynt serve&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;markdown, yaml&lt;/li&gt;
+&lt;li&gt;Template (jinja2)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;how to create taiwan.py&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Taiwan.py&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;每個人都可以加入 (&lt;a href=&#34;https://github.com/lucemia/taiwan.py&#34;&gt;Fork me on Github&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;整合資源 (like PyLadies)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;PyCon 2014 PR 組徵人&lt;/h3&gt;
+&lt;h4&gt;PyCon 2014 PR 組徵人&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;參加活動, 宣傳Python&lt;/li&gt;
 &lt;li&gt;維護 taiwan.py Website&lt;/li&gt;
-&lt;li&gt;跑腿, 想idea (做名片)&lt;/li&gt;
+&lt;li&gt;跑腿, 想idea (做名片) (Joe 要不要再投稿一次?)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Python Sprint 10/5&lt;/h3&gt;
+&lt;h3&gt;Lightening Talk 4 - NextBio Python Open Source by 亮亮&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;讓大家一起加入 Python Open Source 專案&lt;/li&gt;
-&lt;li&gt;徵求專案 &lt;a href=&#34;http://registrano.com/events/1c6673&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bio有超多 BIG DATA&lt;/li&gt;
+&lt;li&gt;BIO Python的問題
+
+&lt;ul&gt;
+&lt;li&gt;缺Doc&lt;/li&gt;
+&lt;li&gt;光FILE I/O就很困難&lt;/li&gt;
+&lt;li&gt;很慢&lt;/li&gt;
+&lt;li&gt;使用一些新的 Module (numpy, panda, PySAM)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;目標提供 Uniform Interface for Basic Bio Object&lt;/li&gt;
+&lt;li&gt;參加Sprint&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Lightening Talk 5 - Whois Call 徵人&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;徵 Web 主管 (一人)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;謝謝講者們的精彩演講!! 讓我們期待九月份的活動:&lt;/p&gt;
@@ -160,7 +306,7 @@
             <title>It works!</title>
             <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/23/It-works/" type="text/html" />
             <id>http://lucemia.github.io/taiwan.py/2013/08/23/It-works/</id>
-            <updated>2013-08-23T09:32:00Z</updated>
+            <updated>2013-08-23T10:01:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
@@ -188,7 +334,18 @@
 
 if __name__ == &amp;quot;__main__&amp;quot;:
   test()
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;網站預定的主題&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;加入影片也OK!&lt;/h2&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2&gt;表格也OK&lt;/h2&gt;
+&lt;table border=&#34;1&#34;&gt;
+ &lt;tr&gt;
+  &lt;td&gt;     # 測試標題  &lt;/td&gt;
+  &lt;td&gt;     *測試斜體*  &lt;/td&gt;
+  &lt;td&gt;     **測試粗體**  &lt;/td&gt;
+  &lt;td&gt;     &gt; 測試引用  &lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2&gt;網站預定的主題&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;蒐集台灣地區Python 社群活動的資訊
 
@@ -366,6 +523,16 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
 &lt;li&gt;Python世界的新聞&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+        </entry>
+    
+        <entry>
+            <title>Test</title>
+            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/01/01/test/" type="text/html" />
+            <id>http://lucemia.github.io/taiwan.py/2013/01/01/test/</id>
+            <updated>2013-01-01T12:54:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;It is a test&lt;/h2&gt;</content>
         </entry>
     
         <entry>

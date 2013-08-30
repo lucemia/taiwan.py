@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="author" content="Python Taiwan">
-
+<meta name="description" content="我們是 Python 台灣使用者群組（簡稱 PyTUG - Python Taiwan User Group），由台灣的 Python 程式語言使用者、學習者或愛好者所組成。">
 <meta name="generator" content="mynt v0.2.3">
 
 <link rel="shortcut icon" href="/taiwan.py/assets/images/favicon.ico" type="image/x-icon">
@@ -79,31 +79,192 @@
     <div class="item">
         <div class="item-header">
             <h1>八月份 Taipei.py 聚會</h1>
-            <h6>Friday, August 30, 2013 <span>&raquo;</span> <a href="/taiwan.py/archives/taipei.py/">taipei.py</a>, Authored by Lucemia</h6>
+            <h6>Friday, August 30, 2013 <span>&raquo;</span> <a href="/taiwan.py/archives/taipei.py/">taipei.py</a>, <i>Authored by Lucemia</i></h6>
         </div>
 
         <div class="item-body">
-            <h3>Lightening Talk</h3>
-<p>如何使用 Mynt 做出 Taiwan.py的網站 <a href="/taiwan.py/2013/08/23/It-works">link</a></p>
+            <h3>Python Sprint 10/5 by Tim</h3>
+<ul>
+<li>PyCon 要辦 Sprint了, 讓大家一起加入 Python Open Source 專案的世界, 一起修Issue!!</li>
+<li>徵求專案, 歡迎已經有一定規模的專案 <a href="http://registrano.com/events/1c6673">link</a></li>
+</ul>
+<h3>主題演講: CPython 原始碼解析 by 果凍</h3><h4>PUT SLIDES HERE</h4><h4>PUT VIDEO HERE</h4>
+<p>這次我要演講的主題是 CPython 如何執行 python code，焦點主要是放在 vm 部分。目前暫無考慮編譯部分。因為是講較底層的東西，因此整個演講會有不少有關 C 語言的東西。另外，也會示範如何利用 gdb 來 了解 python 運作。示範環境在 ubuntu 下。</p>
+
+<p>演講大綱:</p>
 
 <ul>
-<li>what is mynt</li>
-<li>how to use mynt</li>
+<li>code object 與 frame object 簡介</li>
+<li>cpython op code 簡介</li>
+<li>示範如何利用 gdb 來幫助我們了解 python 執行</li>
+<li>cpython 如何執行 op code</li>
 </ul>
-<h3>Taiwan.py</h3>
+
+<p>果凍示範了如何使用<code>dis</code> module 取得 python 程式碼的 opcode. 可以更容易瞭解Python 底層的實作.</p>
+
+<p>聽了拿來試幾個例子:</p>
+
+<ol>
+<li>stackoverflow 上看過(<a href="http://stackoverflow.com/questions/2853683/what-is-the-preferred-syntax-for-initializing-a-dict">What is the preferred syntax for initializing a dict?</a>)有人討論<code>x = dict()</code> 與 <code>x = {}</code> 會有效能差異, 立馬來測一下</li>
+</ol>
+
+<blockquote>
+<p>It works for all kinds of keys, so you can, for example, say {1: &#39;one&#39;, 2: &#39;two&#39;}. The second variant only works for (some) string keys. Using different kinds of syntax depending on the type of the keys would be an unnecessary inconsistency.<br>
+It is faster:</p>
+</blockquote>
+
+<p>測試結果</p>
+<div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">timeit</span> <span class="s">&quot;dict(a=&#39;value&#39;, another=&#39;value&#39;)&quot;</span>
+<span class="mi">1000000</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.79</span> <span class="n">usec</span> <span class="n">per</span> <span class="n">loop</span>
+<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">timeit</span> <span class="s">&quot;{&#39;a&#39;: &#39;value&#39;,&#39;another&#39;: &#39;value&#39;}&quot;</span>
+<span class="mi">1000000</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.305</span> <span class="n">usec</span> <span class="n">per</span> <span class="n">loop</span>
+</pre></div>
+</td></tr></table></div></div>
+<p>實際用 dis 解析</p>
+<div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">dis</span>
+
+<span class="k">def</span> <span class="nf">x1</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">x2</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</td></tr></table></div></div><pre><code>dis.dis(x1)
+&gt;&gt;&gt; dis.dis(x1)
+  2           0 LOAD_GLOBAL              0 (dict)
+              3 CALL_FUNCTION            0
+              6 STORE_FAST               0 (x)
+              9 LOAD_CONST               0 (None)
+             12 RETURN_VALUE
+
+dis.dis(x2)
+&gt;&gt;&gt; dis.dis(x2)
+  2           0 BUILD_MAP                0
+              3 STORE_FAST               0 (x)
+              6 LOAD_CONST               0 (None)
+              9 RETURN_VALUE
+</code></pre>
+<p>可以看得出來很明顯的 <code>x = dict()</code> 多執行了一行 <code>CALL_FUNCTION</code>. 因此就可以瞭解為什麼會有額外的執行負擔.</p>
+
+<ol>
+<li>感覺有點肥的 <code>defaultdict</code></li>
+</ol>
+<div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">def</span> <span class="nf">x1</span><span class="p">():</span>
+    <span class="n">y</span>  <span class="o">=</span><span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">x2</span><span class="p">():</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</td></tr></table></div></div><pre><code>&gt;&gt;&gt; dis.dis(x1)
+  2           0 LOAD_GLOBAL              0 (defaultdict)
+              3 LOAD_CONST               1 (&lt;code object &lt;lambda&gt; at 0x109c45030, file &quot;&lt;stdin&gt;&quot;, line 2&gt;)
+              6 MAKE_FUNCTION            0
+              9 CALL_FUNCTION            1
+             12 STORE_FAST               0 (y)
+
+  3          15 LOAD_FAST                0 (y)
+             18 LOAD_CONST               2 (1)
+             21 DUP_TOPX                 2
+             24 BINARY_SUBSCR
+             25 LOAD_CONST               2 (1)
+             28 INPLACE_ADD
+             29 ROT_THREE
+             30 STORE_SUBSCR
+             31 LOAD_CONST               0 (None)
+             34 RETURN_VALUE
+&gt;&gt;&gt; dis.dis(x2)
+  2           0 BUILD_MAP                0
+              3 STORE_FAST               0 (y)
+
+  3           6 LOAD_FAST                0 (y)
+              9 LOAD_ATTR                0 (get)
+             12 LOAD_CONST               1 (1)
+             15 LOAD_CONST               2 (0)
+             18 CALL_FUNCTION            2
+             21 LOAD_CONST               1 (1)
+             24 BINARY_ADD
+             25 LOAD_FAST                0 (y)
+             28 LOAD_CONST               1 (1)
+             31 STORE_SUBSCR
+             32 LOAD_CONST               0 (None)
+             35 RETURN_VALUE
+</code></pre>
+<p>對於在多種寫法中選擇時多了一些有效參考的工具.</p>
+<h3>Lightening Talk 1 - 使用Blender和簡易的Python Script模擬出如同電影裡的GUI介面動畫^_^ by DC</h3>
+<p>請到果凍的學弟, 一名大一新生! 來introduce Blender, 國中!時受到WANTED 的啓發開始做了第一個Blender動畫. 介紹了很多學生時代使用Blender做出來的影片, <a href="http://www.youtube.com/user/DavidChen831212/videos">作品集</a>看起來效果很驚人! 以後學生就有能力做很好的3D動畫了!!</p>
+<h4>PUT SLIDES HERE</h4><h4>About Blender:</h4>
+<ul>
+<li>Open source</li>
+<li>Cross Platform</li>
+<li>GPU-accelerated</li>
+<li>Python Scripting Support</li>
+<li>Official Open-Movie Projects</li>
+</ul>
+<h4>Use python Script in Blender:</h4>
+<p>可以透過Python Script來做一些Blender裡面不支援的動畫效果. 或是減少很多重複的工作(如focus, defocus的效果). 以及作分鏡.</p>
+
+<p>完成的的影片 <a href="">All or Nothing</a></p>
+<h3>Lightening Talk 2 - Taipei.py Logo 的故事 by Joe</h3>
+<p>不辭風雨從台南上來的Joe, 帶給大家 Taipei.py Logo的故事. 太精彩了, 有機會一定要親耳聽聽看. Python Logo的故事曲折不輸&quot;少年Py的奇幻漂流&quot;</p>
+<h3>Lightening Talk 3 - mynt by David</h3><h4>如何使用 Mynt 做出<a href="/taiwan.py/">Taiwan.py</a>的網站 <a href="/taiwan.py/2013/08/23/It-works">link</a></h4>
+<ul>
+<li>很好寫, 聽完Taipei.py 的活動就寫完了 (比什麼Log什麼Down還好寫!)</li>
+<li>大家加入一起寫! (聽眾心得, 講者補充&hellip; etc)</li>
+<li>what is mynt</li>
+<li>how to use mynt
+
+<ul>
+<li>usage (<code>mynt watch</code>, <code>mynt serve</code>)</li>
+<li>markdown, yaml</li>
+<li>Template (jinja2)</li>
+</ul></li>
+<li>how to create taiwan.py</li>
+</ul>
+<h4>Taiwan.py</h4>
 <ul>
 <li>每個人都可以加入 (<a href="https://github.com/lucemia/taiwan.py">Fork me on Github</a>)</li>
+<li>整合資源 (like PyLadies)</li>
 </ul>
-<h3>PyCon 2014 PR 組徵人</h3>
+<h4>PyCon 2014 PR 組徵人</h4>
 <ul>
 <li>參加活動, 宣傳Python</li>
 <li>維護 taiwan.py Website</li>
-<li>跑腿, 想idea (做名片)</li>
+<li>跑腿, 想idea (做名片) (Joe 要不要再投稿一次?)</li>
 </ul>
-<h3>Python Sprint 10/5</h3>
+<h3>Lightening Talk 4 - NextBio Python Open Source by 亮亮</h3>
 <ul>
-<li>讓大家一起加入 Python Open Source 專案</li>
-<li>徵求專案 <a href="http://registrano.com/events/1c6673">link</a></li>
+<li>Bio有超多 BIG DATA</li>
+<li>BIO Python的問題
+
+<ul>
+<li>缺Doc</li>
+<li>光FILE I/O就很困難</li>
+<li>很慢</li>
+<li>使用一些新的 Module (numpy, panda, PySAM)</li>
+</ul></li>
+<li>目標提供 Uniform Interface for Basic Bio Object</li>
+<li>參加Sprint</li>
+</ul>
+<h3>Lightening Talk 5 - Whois Call 徵人</h3>
+<ul>
+<li>徵 Web 主管 (一人)</li>
 </ul>
 
 <p>謝謝講者們的精彩演講!! 讓我們期待九月份的活動:</p>
