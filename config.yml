@@ -26,7 +26,7 @@ domain:
 # Used in header meta tags and the site feed. (required to generate a valid feed)
 author: Python Taiwan
 # A description of your site to be used in header meta tags.
-description:
+description: 我們是 Python 台灣使用者群組（簡稱 PyTUG - Python Taiwan User Group），由台灣的 Python 程式語言使用者、學習者或愛好者所組成。
 # Used in the site feed.
 email:
 # Your site's subtitle.
