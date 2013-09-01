@@ -2,31 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Python Taiwan</title>
     <subtitle>台灣的Python社群</subtitle>
-    <link rel="alternate" href="http://lucemia.github.io/taiwan.py/" />
-    <link rel="self" href="http://lucemia.github.io/taiwan.py/feed.xml" type="application/atom+xml" />
-    <id>http://lucemia.github.io/taiwan.py/</id>
-    <updated>2013-08-30T02:04:00Z</updated>
+    <link rel="alternate" href="/" />
+    <link rel="self" href="/feed.xml" type="application/atom+xml" />
+    <id>/</id>
+    <updated>2013-09-01T11:07:22Z</updated>
     
     <author>
         <name>Python Taiwan</name>
         
-        <uri>http://lucemia.github.io/taiwan.py/</uri>
+        <uri>/</uri>
     </author>
     
     
         <entry>
             <title>八月份 Taipei.py 聚會</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/30/taipeipy08/</id>
-            <updated>2013-08-30T13:12:00Z</updated>
+            <link rel="alternate" href="/2013/08/30/taipeipy08/" type="text/html" />
+            <id>/2013/08/30/taipeipy08/</id>
+            <updated>2013-08-30T11:07:00Z</updated>
             
             
-            <content type="html">&lt;h3&gt;Python Sprint 10/5 by Tim&lt;/h3&gt;
+            <content type="html">&lt;h3&gt;Python Development Sprint Invitation by Tim&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;PyCon 要辦 Sprint了, 讓大家一起加入 Python Open Source 專案的世界, 一起修Issue!!&lt;/li&gt;
-&lt;li&gt;徵求專案, 歡迎已經有一定規模的專案 &lt;a href=&#34;http://registrano.com/events/1c6673&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PyCon要辦Sprint了,想知道Srpint是什麼嗎?!一起寫Code!&lt;/li&gt;
+&lt;li&gt;徵求專案,歡迎已經有一定規模的專案投稿&lt;a href=&#34;http://registrano.com/events/1c6673&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;主題演講: CPython 原始碼解析 by 果凍&lt;/h3&gt;&lt;h4&gt;PUT SLIDES HERE&lt;/h4&gt;&lt;h4&gt;PUT VIDEO HERE&lt;/h4&gt;
+
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/Aa5SxgQXLxc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3&gt;主題演講: CPython 原始碼解析 by 果凍&lt;/h3&gt;
+&lt;p&gt;投影片:&lt;br&gt;
+&lt;a href=&#34;https://docs.google.com/presentation/d/15rjPknI-5zxH78NbWbu1XSipkJZrw90jKfbN1jtOAho/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.p&#34;&gt;https://docs.google.com/presentation/d/15rjPknI-5zxH78NbWbu1XSipkJZrw90jKfbN1jtOAho/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.p&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;這次我要演講的主題是 CPython 如何執行 python code，焦點主要是放在 vm 部分。目前暫無考慮編譯部分。因為是講較底層的東西，因此整個演講會有不少有關 C 語言的東西。另外，也會示範如何利用 gdb 來 了解 python 運作。示範環境在 ubuntu 下。&lt;/p&gt;
 
 &lt;p&gt;演講大綱:&lt;/p&gt;
@@ -37,6 +42,8 @@
 &lt;li&gt;示範如何利用 gdb 來幫助我們了解 python 執行&lt;/li&gt;
 &lt;li&gt;cpython 如何執行 op code&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/3ys5znk3N7w&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;果凍示範了如何使用&lt;code&gt;dis&lt;/code&gt; module 取得 python 程式碼的 opcode. 可以更容易瞭解Python 底層的實作.&lt;/p&gt;
 
@@ -57,7 +64,7 @@ It is faster:&lt;/p&gt;
 $ python -m timeit &amp;quot;{&amp;#39;a&amp;#39;: &amp;#39;value&amp;#39;,&amp;#39;another&amp;#39;: &amp;#39;value&amp;#39;}&amp;quot;
 1000000 loops, best of 3: 0.305 usec per loop
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;實際用 dis 解析&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;x=dict()&lt;/code&gt;會比&lt;code&gt;x={}&lt;/code&gt;慢上兩倍, 實際用 dis 解析:&lt;/p&gt;
 &lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;import dis
 
 def x1():
@@ -81,58 +88,12 @@ dis.dis(x2)
               6 LOAD_CONST               0 (None)
               9 RETURN_VALUE
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;可以看得出來很明顯的 &lt;code&gt;x = dict()&lt;/code&gt; 多執行了一行 &lt;code&gt;CALL_FUNCTION&lt;/code&gt;. 因此就可以瞭解為什麼會有額外的執行負擔.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;感覺有點肥的 &lt;code&gt;defaultdict&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;
-def x1():
-    y  =defaultdict(lambda: 0)
-    y[1] += 1
-
-def x2():
-    y = {}
-    y[1] = y.get(1, 0) + 1
-
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; dis.dis(x1)
-  2           0 LOAD_GLOBAL              0 (defaultdict)
-              3 LOAD_CONST               1 (&amp;lt;code object &amp;lt;lambda&amp;gt; at 0x109c45030, file &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 2&amp;gt;)
-              6 MAKE_FUNCTION            0
-              9 CALL_FUNCTION            1
-             12 STORE_FAST               0 (y)
-
-  3          15 LOAD_FAST                0 (y)
-             18 LOAD_CONST               2 (1)
-             21 DUP_TOPX                 2
-             24 BINARY_SUBSCR
-             25 LOAD_CONST               2 (1)
-             28 INPLACE_ADD
-             29 ROT_THREE
-             30 STORE_SUBSCR
-             31 LOAD_CONST               0 (None)
-             34 RETURN_VALUE
-&amp;gt;&amp;gt;&amp;gt; dis.dis(x2)
-  2           0 BUILD_MAP                0
-              3 STORE_FAST               0 (y)
-
-  3           6 LOAD_FAST                0 (y)
-              9 LOAD_ATTR                0 (get)
-             12 LOAD_CONST               1 (1)
-             15 LOAD_CONST               2 (0)
-             18 CALL_FUNCTION            2
-             21 LOAD_CONST               1 (1)
-             24 BINARY_ADD
-             25 LOAD_FAST                0 (y)
-             28 LOAD_CONST               1 (1)
-             31 STORE_SUBSCR
-             32 LOAD_CONST               0 (None)
-             35 RETURN_VALUE
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;對於在多種寫法中選擇時多了一些有效參考的工具.&lt;/p&gt;
+&lt;p&gt;可以看得出來很明顯的 &lt;code&gt;x = dict()&lt;/code&gt; 多執行了一行 &lt;code&gt;CALL_FUNCTION&lt;/code&gt;.可以瞭解額外的執行負擔的來源.雖然不能直接從op code的長短推斷執行效率，但對於在寫code時選擇有一些參考的工具.&lt;/p&gt;
 &lt;h3&gt;Lightening Talk 1 - 使用Blender和簡易的Python Script模擬出如同電影裡的GUI介面動畫^_^ by DC&lt;/h3&gt;
 &lt;p&gt;請到果凍的學弟, 一名大一新生! 來introduce Blender, 國中!時受到WANTED 的啓發開始做了第一個Blender動畫. 介紹了很多學生時代使用Blender做出來的影片, &lt;a href=&#34;http://www.youtube.com/user/DavidChen831212/videos&#34;&gt;作品集&lt;/a&gt;看起來效果很驚人! 以後學生就有能力做很好的3D動畫了!!&lt;/p&gt;
-&lt;h4&gt;PUT SLIDES HERE&lt;/h4&gt;&lt;h4&gt;About Blender:&lt;/h4&gt;
+
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/BP59XbF_eJ8&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h4&gt;About Blender:&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Open source&lt;/li&gt;
 &lt;li&gt;Cross Platform&lt;/li&gt;
@@ -145,21 +106,21 @@ def x2():
 
 &lt;p&gt;完成的的影片 &lt;a href=&#34;&#34;&gt;All or Nothing&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Lightening Talk 2 - Taipei.py Logo 的故事 by Joe&lt;/h3&gt;
-&lt;p&gt;不辭風雨從台南上來的Joe, 帶給大家 Taipei.py Logo的故事. 太精彩了, 有機會一定要親耳聽聽看. Python Logo的故事曲折不輸&amp;quot;少年Py的奇幻漂流&amp;quot;&lt;/p&gt;
-&lt;h3&gt;Lightening Talk 3 - mynt by David&lt;/h3&gt;&lt;h4&gt;如何使用 Mynt 做出&lt;a href=&#34;http://lucemia.github.io/taiwan.py/&#34;&gt;Taiwan.py&lt;/a&gt;的網站 &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/08/23/It-works&#34;&gt;link&lt;/a&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;很好寫, 聽完Taipei.py 的活動就寫完了 (比什麼Log什麼Down還好寫!)&lt;/li&gt;
-&lt;li&gt;大家加入一起寫! (聽眾心得, 講者補充&amp;hellip; etc)&lt;/li&gt;
-&lt;li&gt;what is mynt&lt;/li&gt;
-&lt;li&gt;how to use mynt
+&lt;p&gt;不辭風雨從台南上來的Joe, 帶給大家 Taipei.py Logo的故事. 劇情曲折, 十分精彩, 內容不輸&amp;quot;少年Py的奇幻漂流，有機會一定要親耳聽聽看.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;usage (&lt;code&gt;mynt watch&lt;/code&gt;, &lt;code&gt;mynt serve&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;markdown, yaml&lt;/li&gt;
-&lt;li&gt;Template (jinja2)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;how to create taiwan.py&lt;/li&gt;
-&lt;/ul&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/cUALmBvKHFc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3&gt;Lightening Talk 3 - mynt by David&lt;/h3&gt;&lt;h4&gt;如何使用 Mynt 做出&lt;a href=&#34;/&#34;&gt;Taiwan.py&lt;/a&gt;的網站 &lt;a href=&#34;/2013/08/23/It-works&#34;&gt;link&lt;/a&gt;&lt;/h4&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/aWOkMjQjniI&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Taipei.py 以後會用MyNt做會後報導&lt;br&gt;
+- 很好寫, 聽完Taipei.py 的活動就寫完了 (比什麼Log什麼Down還好寫!)&lt;br&gt;
+- 大家加入一起寫! (聽眾心得, 講者補充&amp;hellip; etc)&lt;br&gt;
+- what is mynt&lt;br&gt;
+- how to use mynt&lt;br&gt;
+  - usage (&lt;code&gt;mynt watch&lt;/code&gt;, &lt;code&gt;mynt serve&lt;/code&gt;)&lt;br&gt;
+  - markdown, yaml&lt;br&gt;
+  - Template (jinja2)&lt;br&gt;
+- how to create taiwan.py&lt;/p&gt;
 &lt;h4&gt;Taiwan.py&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;每個人都可以加入 (&lt;a href=&#34;https://github.com/lucemia/taiwan.py&#34;&gt;Fork me on Github&lt;/a&gt;)&lt;/li&gt;
@@ -172,6 +133,8 @@ def x2():
 &lt;li&gt;跑腿, 想idea (做名片) (Joe 要不要再投稿一次?)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Lightening Talk 4 - NextBio Python Open Source by 亮亮&lt;/h3&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/QgDQSs4gggA&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Bio有超多 BIG DATA&lt;/li&gt;
 &lt;li&gt;BIO Python的問題
@@ -183,14 +146,16 @@ def x2():
 &lt;li&gt;使用一些新的 Module (numpy, panda, PySAM)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;目標提供 Uniform Interface for Basic Bio Object&lt;/li&gt;
-&lt;li&gt;參加Sprint&lt;/li&gt;
+&lt;li&gt;參加Sprint, 歡迎大家&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Lightening Talk 5 - Whois Call 徵人&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;徵 Web 主管 (一人)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;謝謝講者們的精彩演講!! 讓我們期待九月份的活動:&lt;/p&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/iyWTDd65244&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;謝謝講者們的精彩演講!! 這次有五場Lightening Talk實在太充實啦, 讓我們期待九月份的活動:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.meetup.com/Taipei-py/events/124230392/&#34;&gt;九月 Taipei.py&lt;/a&gt;&lt;/li&gt;
@@ -202,9 +167,9 @@ def x2():
     
         <entry>
             <title>八月份  Python For Google Cloud 聚會</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/27/cloud08/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/27/cloud08/</id>
-            <updated>2013-08-27T09:54:00Z</updated>
+            <link rel="alternate" href="/2013/08/27/cloud08/" type="text/html" />
+            <id>/2013/08/27/cloud08/</id>
+            <updated>2013-08-27T08:45:00Z</updated>
             
             <summary type="html">這次的活動邀請到Google的人員來參加, 活動坐滿, 感動，樓上是Logdown的活動, 很多人走錯 XD&lt;br&gt;
 講題是英文的聽得有些吃力,但內容很豐富可惜沒有錄影.</summary>
@@ -294,9 +259,9 @@ def x2():
     
         <entry>
             <title>Python Taiwan Sprint</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/26/sprint/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/26/sprint/</id>
-            <updated>2013-08-26T04:12:00Z</updated>
+            <link rel="alternate" href="/2013/08/26/sprint/" type="text/html" />
+            <id>/2013/08/26/sprint/</id>
+            <updated>2013-08-26T08:45:00Z</updated>
             
             
             <content type="html"></content>
@@ -304,9 +269,9 @@ def x2():
     
         <entry>
             <title>It works!</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/23/It-works/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/23/It-works/</id>
-            <updated>2013-08-23T10:01:00Z</updated>
+            <link rel="alternate" href="/2013/08/23/It-works/" type="text/html" />
+            <id>/2013/08/23/It-works/</id>
+            <updated>2013-08-23T08:45:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
@@ -335,7 +300,7 @@ def x2():
 if __name__ == &amp;quot;__main__&amp;quot;:
   test()
 &lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;加入影片也OK!&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;h2&gt;表格也OK&lt;/h2&gt;
 &lt;table border=&#34;1&#34;&gt;
  &lt;tr&gt;
@@ -350,12 +315,12 @@ if __name__ == &amp;quot;__main__&amp;quot;:
 &lt;li&gt;蒐集台灣地區Python 社群活動的資訊
 
 &lt;ul&gt;
-&lt;li&gt;活動心得, 投影片, Slides &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;活動心得, 投影片, Slides &lt;a href=&#34;/2013/07/27/taipeipy07&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;各地社群入口&lt;/li&gt;
 &lt;li&gt;活動與宣傳&lt;/li&gt;
-&lt;li&gt;台灣社群成員的Open Source計劃!! &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/08/23/speedtest&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;台灣社群成員的Open Source計劃!! &lt;a href=&#34;/2013/08/23/speedtest&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;台灣地區 Python 相關的公司徵才與活動 &lt;a href=&#34;http://lucemia.github.io/taiwan.py/2013/07/01/qnap&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;台灣地區 Python 相關的公司徵才與活動 &lt;a href=&#34;/2013/07/01/qnap&#34;&gt;範例&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Python世界的新聞&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -363,9 +328,9 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
         <entry>
             <title>Server Benchmark 工具</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/08/23/speedtest/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/08/23/speedtest/</id>
-            <updated>2013-08-23T00:22:00Z</updated>
+            <link rel="alternate" href="/2013/08/23/speedtest/" type="text/html" />
+            <id>/2013/08/23/speedtest/</id>
+            <updated>2013-08-23T08:45:00Z</updated>
             
             
             <content type="html">&lt;h1&gt;Python寫的網路測速程式&lt;/h1&gt;
@@ -416,21 +381,21 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>七月份Taipei.py聚會</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/07/27/taipeipy07/</id>
-            <updated>2013-07-27T00:22:00Z</updated>
+            <link rel="alternate" href="/2013/07/27/taipeipy07/" type="text/html" />
+            <id>/2013/07/27/taipeipy07/</id>
+            <updated>2013-07-27T08:45:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;Visual Communication for customer electronic application with Python Blender and SAKURA board.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/PU9Ilx1Rhvw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/PU9Ilx1Rhvw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;七月的主題演講, 介紹Python Blender 這款好用的開源3D 建模工具, 以及和 Sakura board 的連接&lt;/p&gt;
 &lt;h2&gt;iPython Notebook.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/nzbiIAIxp1E&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/nzbiIAIxp1E&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;c3h3介紹如何使用iPython Notebook 快速的作出有各種轉場效果的投影片!&lt;/p&gt;
 &lt;h2&gt;Lightening Talk of Mosky.&lt;/h2&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;//www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;/www.youtube.com/embed/pZUtFxkQYak&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Mosky的 Lightening Talk, 主題是Python 的 Open Source 專案&lt;br&gt;
 內容包括有 MoSQL, Clime&lt;/p&gt;
@@ -442,9 +407,9 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>QNAP 威聯通 徵才</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/07/01/qnap/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/07/01/qnap/</id>
-            <updated>2013-07-01T00:22:00Z</updated>
+            <link rel="alternate" href="/2013/07/01/qnap/" type="text/html" />
+            <id>/2013/07/01/qnap/</id>
+            <updated>2013-07-01T08:45:00Z</updated>
             
             
             <content type="html">&lt;blockquote&gt;
@@ -483,9 +448,9 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>PyCon 2013</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/03/01/PyCon/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/03/01/PyCon/</id>
-            <updated>2013-03-01T00:22:00Z</updated>
+            <link rel="alternate" href="/2013/03/01/PyCon/" type="text/html" />
+            <id>/2013/03/01/PyCon/</id>
+            <updated>2013-03-01T08:45:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;測試 PyCon 2013&lt;/h2&gt;
@@ -527,9 +492,9 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>Test</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2013/01/01/test/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2013/01/01/test/</id>
-            <updated>2013-01-01T12:54:00Z</updated>
+            <link rel="alternate" href="/2013/01/01/test/" type="text/html" />
+            <id>/2013/01/01/test/</id>
+            <updated>2013-01-01T08:45:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;It is a test&lt;/h2&gt;</content>
@@ -537,9 +502,9 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
     
         <entry>
             <title>MoSQL</title>
-            <link rel="alternate" href="http://lucemia.github.io/taiwan.py/2012/01/01/Mosql/" type="text/html" />
-            <id>http://lucemia.github.io/taiwan.py/2012/01/01/Mosql/</id>
-            <updated>2012-01-01T00:22:00Z</updated>
+            <link rel="alternate" href="/2012/01/01/Mosql/" type="text/html" />
+            <id>/2012/01/01/Mosql/</id>
+            <updated>2012-01-01T08:45:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
