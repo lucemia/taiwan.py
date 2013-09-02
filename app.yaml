@@ -4,6 +4,8 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+default_expiration: "0s"
+
 libraries:
 - name: jinja2
   version: "latest"
@@ -12,6 +14,10 @@ libraries:
 
 handlers:
 
+- url: /$
+  static_files: build/index.html
+  upload: build/index.html
+
 # index files
 - url: /(.+)/
   static_files: build/\1/index.html
@@ -19,6 +25,5 @@ handlers:
 
 - url: /
   static_dir: build
-  expiration: "0s"
 
 
