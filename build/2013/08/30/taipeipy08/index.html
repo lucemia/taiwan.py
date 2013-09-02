@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="author" content="Python Taiwan">
+<meta name="description" content="我們是 Python 台灣使用者群組（簡稱 PyTUG - Python Taiwan User Group），由台灣的 Python 程式語言使用者、學習者或愛好者所組成。">
+<meta name="generator" content="mynt v0.2.3">
+
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+<link rel="alternate" href="/feed.xml" type="application/atom+xml">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Ubuntu+Mono:400,400italic" type="text/css">
+<!-- <link rel="stylesheet" href="/assets/css/screen.css" type="text/css">-->
+<link rel="stylesheet" href="/assets/css/pygments.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/bootstrap-responsive.min.css" type="text/css">
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  footer {
+    background-color: #f5f5f5;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    right:0px;
+    left:0px;
+    bottom: 0px;
+  }
+</style>
+
+
+
+    <title>八月份 Taipei.py 聚會 &ndash; Python Taiwan</title>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="/">Python Taiwan</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/blogs/">Blog</a></li>
+                        <li><a href="/events/">Events</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/jobs/">Jobs</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://python.org.tw/">Wiki</a></li>
+                                <li><a href="https://groups.google.com/forum/#!forum/pythontw">Google Group</a></li>
+                                <li><a href="https://www.facebook.com/groups/pythontw/?fref=ts">Facebook</a></li>
+                                <li class="divider"></li>
+                                <li class="nav-header">Nav header</li>
+                                <li><a href="/archives/">Archives</a></li>
+                                <li><a href="/feed.xml">Feed</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+             
+            <div id="content" class="span8">
+                
+    <div class="item">
+        <div class="item-header">
+            <h1>八月份 Taipei.py 聚會</h1>
+            <h6>Friday, August 30, 2013 <span>&raquo;</span> <a href="/archives/taipei.py/">taipei.py</a>, <i>Authored by Lucemia</i></h6>
+        </div>
+
+        <div class="item-body">
+            <h3>Python Development Sprint Invitation by Tim</h3>
+<ul>
+<li>PyCon要辦Sprint了,想知道Srpint是什麼嗎?!一起寫Code!</li>
+<li>徵求專案,歡迎已經有一定規模的專案投稿<a href="http://registrano.com/events/1c6673">link</a></li>
+</ul>
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/Aa5SxgQXLxc" frameborder="0" allowfullscreen></iframe>
+<h3>主題演講: CPython 原始碼解析 by 果凍</h3>
+<p>投影片:<br>
+<a href="https://docs.google.com/presentation/d/15rjPknI-5zxH78NbWbu1XSipkJZrw90jKfbN1jtOAho/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.p">https://docs.google.com/presentation/d/15rjPknI-5zxH78NbWbu1XSipkJZrw90jKfbN1jtOAho/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.p</a></p>
+
+<p>這次我要演講的主題是 CPython 如何執行 python code，焦點主要是放在 vm 部分。目前暫無考慮編譯部分。因為是講較底層的東西，因此整個演講會有不少有關 C 語言的東西。另外，也會示範如何利用 gdb 來 了解 python 運作。示範環境在 ubuntu 下。</p>
+
+<p>演講大綱:</p>
+
+<ul>
+<li>code object 與 frame object 簡介</li>
+<li>cpython op code 簡介</li>
+<li>示範如何利用 gdb 來幫助我們了解 python 執行</li>
+<li>cpython 如何執行 op code</li>
+</ul>
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/3ys5znk3N7w" frameborder="0" allowfullscreen></iframe>
+
+<p>果凍示範了如何使用<code>dis</code> module 取得 python 程式碼的 opcode. 可以更容易瞭解Python 底層的實作.</p>
+
+<p>聽了拿來試幾個例子:</p>
+
+<ol>
+<li>stackoverflow 上看過(<a href="http://stackoverflow.com/questions/2853683/what-is-the-preferred-syntax-for-initializing-a-dict">What is the preferred syntax for initializing a dict?</a>)有人討論<code>x = dict()</code> 與 <code>x = {}</code> 會有效能差異, 立馬來測一下</li>
+</ol>
+
+<blockquote>
+<p>It works for all kinds of keys, so you can, for example, say {1: &#39;one&#39;, 2: &#39;two&#39;}. The second variant only works for (some) string keys. Using different kinds of syntax depending on the type of the keys would be an unnecessary inconsistency.<br>
+It is faster:</p>
+</blockquote>
+
+<p>測試結果</p>
+<div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">timeit</span> <span class="s">&quot;dict(a=&#39;value&#39;, another=&#39;value&#39;)&quot;</span>
+<span class="mi">1000000</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.79</span> <span class="n">usec</span> <span class="n">per</span> <span class="n">loop</span>
+<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">timeit</span> <span class="s">&quot;{&#39;a&#39;: &#39;value&#39;,&#39;another&#39;: &#39;value&#39;}&quot;</span>
+<span class="mi">1000000</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.305</span> <span class="n">usec</span> <span class="n">per</span> <span class="n">loop</span>
+</pre></div>
+</td></tr></table></div></div>
+<p><code>x=dict()</code>會比<code>x={}</code>慢上兩倍, 實際用 dis 解析:</p>
+<div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">dis</span>
+
+<span class="k">def</span> <span class="nf">x1</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">x2</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</td></tr></table></div></div><pre><code>dis.dis(x1)
+&gt;&gt;&gt; dis.dis(x1)
+  2           0 LOAD_GLOBAL              0 (dict)
+              3 CALL_FUNCTION            0
+              6 STORE_FAST               0 (x)
+              9 LOAD_CONST               0 (None)
+             12 RETURN_VALUE
+
+dis.dis(x2)
+&gt;&gt;&gt; dis.dis(x2)
+  2           0 BUILD_MAP                0
+              3 STORE_FAST               0 (x)
+              6 LOAD_CONST               0 (None)
+              9 RETURN_VALUE
+</code></pre>
+<p>可以看得出來很明顯的 <code>x = dict()</code> 多執行了一行 <code>CALL_FUNCTION</code>.可以瞭解額外的執行負擔的來源.雖然不能直接從op code的長短推斷執行效率，但對於在寫code時選擇有一些參考的工具.</p>
+<h3>Lightening Talk 1 - 使用Blender和簡易的Python Script模擬出如同電影裡的GUI介面動畫^_^ by DC</h3>
+<p>請到果凍的學弟, 一名大一新生! 來introduce Blender, 國中!時受到WANTED 的啓發開始做了第一個Blender動畫. 介紹了很多學生時代使用Blender做出來的影片, <a href="http://www.youtube.com/user/DavidChen831212/videos">作品集</a>看起來效果很驚人! 以後學生就有能力做很好的3D動畫了!!</p>
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/BP59XbF_eJ8" frameborder="0" allowfullscreen></iframe>
+<h4>About Blender:</h4>
+<ul>
+<li>Open source</li>
+<li>Cross Platform</li>
+<li>GPU-accelerated</li>
+<li>Python Scripting Support</li>
+<li>Official Open-Movie Projects</li>
+</ul>
+<h4>Use python Script in Blender:</h4>
+<p>可以透過Python Script來做一些Blender裡面不支援的動畫效果. 或是減少很多重複的工作(如focus, defocus的效果). 以及作分鏡.</p>
+
+<p>完成的的影片 <a href="">All or Nothing</a></p>
+<h3>Lightening Talk 2 - Taipei.py Logo 的故事 by Joe</h3>
+<p>不辭風雨從台南上來的Joe, 帶給大家 Taipei.py Logo的故事. 劇情曲折, 十分精彩, 內容不輸&quot;少年Py的奇幻漂流，有機會一定要親耳聽聽看.</p>
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/cUALmBvKHFc" frameborder="0" allowfullscreen></iframe>
+<h3>Lightening Talk 3 - mynt by David</h3><h4>如何使用 Mynt 做出<a href="/">Taiwan.py</a>的網站 <a href="/2013/08/23/It-works">link</a></h4>
+<iframe width="640" height="480" src="//www.youtube.com/embed/aWOkMjQjniI" frameborder="0" allowfullscreen></iframe>
+
+<p>Taipei.py 以後會用MyNt做會後報導<br>
+- 很好寫, 聽完Taipei.py 的活動就寫完了 (比什麼Log什麼Down還好寫!)<br>
+- 大家加入一起寫! (聽眾心得, 講者補充&hellip; etc)<br>
+- what is mynt<br>
+- how to use mynt<br>
+  - usage (<code>mynt watch</code>, <code>mynt serve</code>)<br>
+  - markdown, yaml<br>
+  - Template (jinja2)<br>
+- how to create taiwan.py</p>
+<h4>Taiwan.py</h4>
+<ul>
+<li>每個人都可以加入 (<a href="https://github.com/lucemia/taiwan.py">Fork me on Github</a>)</li>
+<li>整合資源 (like PyLadies)</li>
+</ul>
+<h4>PyCon 2014 PR 組徵人</h4>
+<ul>
+<li>參加活動, 宣傳Python</li>
+<li>維護 taiwan.py Website</li>
+<li>跑腿, 想idea (做名片) (Joe 要不要再投稿一次?)</li>
+</ul>
+<h3>Lightening Talk 4 - NextBio Python Open Source by 亮亮</h3>
+<iframe width="640" height="480" src="//www.youtube.com/embed/QgDQSs4gggA" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li>Bio有超多 BIG DATA</li>
+<li>BIO Python的問題
+
+<ul>
+<li>缺Doc</li>
+<li>光FILE I/O就很困難</li>
+<li>很慢</li>
+<li>使用一些新的 Module (numpy, panda, PySAM)</li>
+</ul></li>
+<li>目標提供 Uniform Interface for Basic Bio Object</li>
+<li>參加Sprint, 歡迎大家</li>
+</ul>
+<h3>Lightening Talk 5 - Whois Call 徵人</h3>
+<ul>
+<li>徵 Web 主管 (一人)</li>
+</ul>
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/iyWTDd65244" frameborder="0" allowfullscreen></iframe>
+
+<p>謝謝講者們的精彩演講!! 這次有五場Lightening Talk實在太充實啦, 讓我們期待九月份的活動:</p>
+
+<ul>
+<li><a href="http://www.meetup.com/Taipei-py/events/124230392/">九月 Taipei.py</a></li>
+<li>Django Workshop,</li>
+<li>Python for Google Cloud</li>
+</ul>
+
+        </div>
+    </div>
+
+            </div>
+            <div id="sidebar" class="span4">
+                 <iframe width="225" height="400" src="http://meetu.ps/1YJB0n" frameborder="0"></iframe>
+                 <form action="http://www.newsleopard.com/mailverify.htm?x=8a2acf2c40b8e4430140c767beb04f50" target="popupwindow" method="post" onsubmit="window.open('', 'popupwindow', 'scrollbars=yes,width=350,height=115');return true">
+                    <input name="email" type="text"/><br/>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <h2>Taipei.py</h2>
+                    <p>活動於台北周邊的 Python 玩家，歡迎來玩！</p>
+                    <p><a class="btn" href="http://taipei.python.org.tw/">View details &raquo;</a></p>
+                </div>
+                <div class="span4">
+                    <h2>PyHug</h2>
+                    <p>活動於新竹周邊的 Python 程式員。非常歡迎你加入我們的聚會！</p>
+                    <p><a class="btn" href="http://www.meetup.com/pythonhug/">View details &raquo;</a></p>
+                </div>
+                <div class="span4">
+                    <h2>Tainan.py</h2>
+                    <p>活動於台南周邊的 Python 人客，歡迎來吃！</p>
+                    <p><a class="btn" href="http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/">View details &raquo;</a></p>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; Python Taiwan 2013</p>
+        </div> <!-- /container -->
+    </footer>
+
+    <a href="https://github.com/lucemia/taiwan.py"><img style="background-color:transparent;position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+    <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/mynt.min.js" type="text/javascript"></script>
+<script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-dropdown.js" type="text/javascript"></script>
+</body>
+</html>
