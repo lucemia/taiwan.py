@@ -12,10 +12,13 @@ libraries:
 
 handlers:
 
-- url: ([^.]*)
+# index files
+- url: /(.+)/
   static_files: build/\1/index.html
-  upload: build/.*
+  upload: build/(.+)/index.html
 
 - url: /
   static_dir: build
-  expiration: "30"
+  expiration: "0s"
+
+
