@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block content %}
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+    <h1>{{ site.subtitle }}</h1>
+    <p>{{ site.description }}</p>
+    <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+<h3>Recent Update</h3>
+{% for post in posts[:3] %}
+<div>
+    <h4><a href={{ get_url(post.url) }}>{{ post.title }}</a></h4>
+    <h6>{{ post.date }}{% if post.tags %} <span>&raquo;</span> {% for tag in post.tags %}<a href="{{ get_url(tags[tag].url) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</h6>
+</div>
+{% endfor %}
+
+{% endblock %}
