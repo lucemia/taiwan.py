@@ -8,6 +8,8 @@ type: event
 
 每週都來參加Taipei.py社群辦的聚會嗎？花了時間除了學到一些很棒的技術是否想要有個東西來記錄紀念這段學習的日子，所以社群決定要做Django的貼紙。
 
+活動網址: https://www.facebook.com/groups/pythontw/?fref=ts
+
 貼紙大小: 名片大小 (90mm x 54mm)
 
 貼紙圖樣：
