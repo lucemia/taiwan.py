@@ -5,7 +5,7 @@
     <link rel="alternate" href="/" />
     <link rel="self" href="/feed.xml" type="application/atom+xml" />
     <id>/</id>
-    <updated>2013-09-02T03:31:06Z</updated>
+    <updated>2013-09-03T16:14:31Z</updated>
     
     <author>
         <name>Python Taiwan</name>
@@ -258,20 +258,10 @@ dis.dis(x2)
         </entry>
     
         <entry>
-            <title>Python Taiwan Sprint</title>
-            <link rel="alternate" href="/2013/08/26/sprint/" type="text/html" />
-            <id>/2013/08/26/sprint/</id>
-            <updated>2013-08-26T00:55:00Z</updated>
-            
-            
-            <content type="html"></content>
-        </entry>
-    
-        <entry>
-            <title>It works!</title>
+            <title>Python社群網站,  It works!</title>
             <link rel="alternate" href="/2013/08/23/It-works/" type="text/html" />
             <id>/2013/08/23/It-works/</id>
-            <updated>2013-08-23T00:55:00Z</updated>
+            <updated>2013-08-23T14:29:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
@@ -380,6 +370,42 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
         </entry>
     
         <entry>
+            <title>django workshop logo 徵稿</title>
+            <link rel="alternate" href="/2013/08/10/django-sticker/" type="text/html" />
+            <id>/2013/08/10/django-sticker/</id>
+            <updated>2013-08-10T16:14:00Z</updated>
+            
+            <summary type="html">每週都來參加Taipei.py社群辦的聚會嗎？花了時間除了學到一些很棒的技術是否想要有個東西來記錄紀念這段學習的日子，所以社群決定要做Django的貼紙。</summary>
+            <content type="html">&lt;p&gt;每週都來參加Taipei.py社群辦的聚會嗎？花了時間除了學到一些很棒的技術是否想要有個東西來記錄紀念這段學習的日子，所以社群決定要做Django的貼紙。&lt;/p&gt;
+
+&lt;p&gt;貼紙大小: 名片大小 (90mm x 54mm)&lt;/p&gt;
+
+&lt;p&gt;貼紙圖樣：&lt;br&gt;
+有Django這幾個字，我查到歐洲的社群為django設計一隻pony吉祥物，可以把pony放進設計裡。也可以增加by Taipei.py的資訊。要怎麼設計就看各位社群的夥伴的巧思囉！&lt;/p&gt;
+
+&lt;p&gt;參考資料：&lt;br&gt;
+django logos: &lt;a href=&#34;https://www.djangoproject.com/community/logos/&#34;&gt;https://www.djangoproject.com/community/logos/&lt;/a&gt;&lt;br&gt;
+pony: &lt;a href=&#34;http://www.mylittledjango.com/pony/adopt/15779/&#34;&gt;http://www.mylittledjango.com/pony/adopt/15779/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;投稿地點:&lt;br&gt;
+主題為「Taipei.py 貼圖徵稿 by (你的名字)」&lt;br&gt;
+email: &lt;a href=&#34;mailto:chen.paladin@gmail.com&#34;&gt;chen.paladin@gmail.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;徵稿截止日期：&lt;br&gt;
+9/3&lt;/p&gt;
+
+&lt;p&gt;投票日：&lt;br&gt;
+9/17&lt;/p&gt;
+
+&lt;p&gt;如有建議可以直接在FB上傳訊息給&lt;a href=&#34;https://www.facebook.com/chen.paladin?fref=ts&#34;&gt;陳學成&lt;/a&gt;喔!&lt;/p&gt;
+&lt;h2&gt;投稿1&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash4/1003927_10200824437387921_1442442689_n.jpg&#34; alt=&#34;投稿1&#34;&gt;&lt;/p&gt;
+&lt;h2&gt;投稿2&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn2/q71/1186693_10200913854343289_1193262677_n.jpg&#34; alt=&#34;投稿2&#34;&gt;&lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
             <title>七月份Taipei.py聚會</title>
             <link rel="alternate" href="/2013/07/27/taipeipy07/" type="text/html" />
             <id>/2013/07/27/taipeipy07/</id>
@@ -443,104 +469,6 @@ mac,2013-08-21 21:52:30.608635,True,2182,kbro CO.LTD,Hsinchu,Taiwan,9644.62,Telu
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.104.com.tw/jobbank/custjob/index.php?r=job&amp;amp;j=5d3d472a4f49425934353d6643413b1d0433d472937394324242424233c642928654j00&amp;amp;jobsource=n104bank1&amp;amp;hotjob_chr=&#34;&gt;104徵才訊息&lt;/a&gt;&lt;/p&gt;
-</content>
-        </entry>
-    
-        <entry>
-            <title>PyCon 2013</title>
-            <link rel="alternate" href="/2013/03/01/PyCon/" type="text/html" />
-            <id>/2013/03/01/PyCon/</id>
-            <updated>2013-03-01T00:55:00Z</updated>
-            
-            
-            <content type="html">&lt;h2&gt;測試 PyCon 2013&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 mynt
-
-&lt;ul&gt;
-&lt;li&gt;可以放在github 上面, 每個人都可以commit, 並且進行版本控制&lt;/li&gt;
-&lt;li&gt;程式設計師嘛, 哪有 CMS 比自己的寫程式工具好用?!&lt;/li&gt;
-&lt;li&gt;靜態網站, 簡單容易自定 每個人都可以改&lt;/li&gt;
-&lt;li&gt;最喜歡 Markdown!&lt;/li&gt;
-&lt;li&gt;這是 Python寫的&lt;/li&gt;
-&lt;li&gt;支援blog 需要的功能&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;使用靜態網站的好處&lt;/li&gt;
-&lt;li&gt;PyLadies也是使用mynt寫的喔!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://markdown.tw/&#34;&gt;Markdown 中文教學&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://www.pyladies.com/&#34;&gt;PyLadies 使用mynt架的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/pyladies/pyladies&#34;&gt;原始碼&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://mynt.mirroredwhite.com/&#34;&gt;mynt 的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/Anomareh/mynt&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;加入程式碼與Syntax Highlighting很方便&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;    def test():
-        print &amp;quot;Hello World&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;網站預定的功能&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;蒐集台灣地區Python 社群活動的資訊
-
-&lt;ul&gt;
-&lt;li&gt;活動紀錄, 投影片&lt;/li&gt;
-&lt;li&gt;各地社群入口&lt;/li&gt;
-&lt;li&gt;活動宣傳&lt;/li&gt;
-&lt;li&gt;台灣社群成員的Open Source計劃&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;台灣地區 Python 相關的公司與學術活動&lt;/li&gt;
-&lt;li&gt;Python世界的新聞&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        </entry>
-    
-        <entry>
-            <title>Test</title>
-            <link rel="alternate" href="/2013/01/01/test/" type="text/html" />
-            <id>/2013/01/01/test/</id>
-            <updated>2013-01-01T00:55:00Z</updated>
-            
-            
-            <content type="html">&lt;h2&gt;It is a test&lt;/h2&gt;</content>
-        </entry>
-    
-        <entry>
-            <title>MoSQL</title>
-            <link rel="alternate" href="/2012/01/01/Mosql/" type="text/html" />
-            <id>/2012/01/01/Mosql/</id>
-            <updated>2012-01-01T00:55:00Z</updated>
-            
-            
-            <content type="html">&lt;h2&gt;測試 Python Taiwan 社群的新家!&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 mynt
-
-&lt;ul&gt;
-&lt;li&gt;可以放在github 上面, 每個人都可以commit, 並且進行版本控制&lt;/li&gt;
-&lt;li&gt;程式設計師嘛, 哪有 CMS 比自己的寫程式工具好用?!&lt;/li&gt;
-&lt;li&gt;靜態網站, 簡單容易自定 每個人都可以改&lt;/li&gt;
-&lt;li&gt;最喜歡 Markdown!&lt;/li&gt;
-&lt;li&gt;這是 Python寫的&lt;/li&gt;
-&lt;li&gt;支援blog 需要的功能&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;使用靜態網站的好處&lt;/li&gt;
-&lt;li&gt;PyLadies也是使用mynt寫的喔!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://markdown.tw/&#34;&gt;Markdown 中文教學&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://www.pyladies.com/&#34;&gt;PyLadies 使用mynt架的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/pyladies/pyladies&#34;&gt;原始碼&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://mynt.mirroredwhite.com/&#34;&gt;mynt 的網站&lt;/a&gt; | &lt;a href=&#34;https://github.com/Anomareh/mynt&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;加入程式碼與Syntax Highlighting很方便&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;    def test():
-        print &amp;quot;Hello World&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;網站預定的功能&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;蒐集台灣地區Python 社群活動的資訊
-
-&lt;ul&gt;
-&lt;li&gt;活動紀錄, 投影片&lt;/li&gt;
-&lt;li&gt;各地社群入口&lt;/li&gt;
-&lt;li&gt;活動宣傳&lt;/li&gt;
-&lt;li&gt;台灣社群成員的Open Source計劃&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;台灣地區 Python 相關的公司與學術活動&lt;/li&gt;
-&lt;li&gt;Python世界的新聞&lt;/li&gt;
-&lt;/ul&gt;
 </content>
         </entry>
     
