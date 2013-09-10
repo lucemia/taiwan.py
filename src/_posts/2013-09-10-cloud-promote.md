@@ -12,3 +12,5 @@ author: Lucemia
 2. 填申請書 [link](https://docs.google.com/a/google.com/forms/d/1LiLsWkh0jiGZz-bH2gewv9Ic8eyJmd_cqBTeBwisbAQ/viewform), Promo Code填bee-in
 3. 審核會在兩周內完成, 完成後寄信通知
 4. 有問題的話可以寄信給我 [lucemia](https://www.facebook.com/lucemia)
+
+另外 Google Cloud Support Team 最近很常跑台灣想要多認識這裡的開發者. 目前有在徵求使用案例, 如果你的公司/專案有在使用 Google AppEngine, Compute Engine 的話. 可以寄信給我會轉達給他們!
