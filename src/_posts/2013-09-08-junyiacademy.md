@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: 均一教育平台徵熱血之士
-tags: [education]
+tags: [junyiacademy]
 author: Lucemia
 type: project
 ---
