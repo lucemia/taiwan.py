@@ -323,6 +323,7 @@ a > img {
 
 .item-body {
   margin-top: 18px;
+  line-height: 1.5em;
 }
 .item-body > :first-child {
   margin-top: 0px;
