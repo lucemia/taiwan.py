@@ -1,0 +1,11 @@
+這個資料夾 (/src/_social_posts) 包含了要發布到社群網站上的短文，以 YAML 儲存。
+
+_social_post
+├── 2013/
+│   ├── 10/
+│   │   ├── MMDD_post_1_title.yaml
+│   │   └── MMDD_post_2_title.yaml
+│   ├── 11/
+│   └── 12/
+├── HOWTO_POST
+└── example.yaml

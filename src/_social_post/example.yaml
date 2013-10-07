@@ -1,0 +1,19 @@
+---
+layout: fb_fan
+title: &title A guide to analyzing Python performance
+author: 亮亮
+source: 
+    title: *title
+    author: Huy Nguyen
+    link: http://www.huyng.com/posts/python-performance-analysis/
+    # pic: /path/to/post/pic.png  # 粉絲頁連結的圖片
+abstract:
+    # 這邊可以打多行的簡單介紹，但因為主要是發在 FB 粉絲頁上，
+    # 要盡量控制文長，並且不支援任何 markdown 語法。
+>
+    本篇文章介紹如何使用 Python 套件來衡量 Python 程式的執行效率，
+    分別從執行時間、記憶體用量來找出 bottleneck 以及 memory leak 的所在處。
+ 
+    文中提供了豐富的範例程式與說明，也介紹了從基本到進階的分析方法，
+    想要提昇程式的效率？本文值得各位參考！
+---
