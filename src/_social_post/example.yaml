@@ -1,4 +1,3 @@
----
 layout: fb_fan
 title: &title A guide to analyzing Python performance
 author: 亮亮
@@ -16,4 +15,3 @@ abstract:
  
     文中提供了豐富的範例程式與說明，也介紹了從基本到進階的分析方法，
     想要提昇程式的效率？本文值得各位參考！
----

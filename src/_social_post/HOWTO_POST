@@ -1,11 +1,57 @@
-這個資料夾 (/src/_social_posts) 包含了要發布到社群網站上的短文，以 YAML 儲存。
+# ----------------------------------------------------------------------------
+# 簡介、架構
+# ----------------------------------------------------------------------------
 
-_social_post
-├── 2013/
-│   ├── 10/
-│   │   ├── MMDD_post_1_title.yaml
-│   │   └── MMDD_post_2_title.yaml
-│   ├── 11/
-│   └── 12/
-├── HOWTO_POST
-└── example.yaml
+這個資料夾 (`/src/_social_posts`) 包含了要發布到社群網站上的短文，
+
+以 YAML 儲存，按日期放在 `YYYY/MM/MMDD_標題名稱.yaml` 中。
+
+    _social_post
+    ├── 2013/
+    │   ├── 10/
+    │   │   ├── 10DD_post_1_title.yaml
+    │   │   └── 10DD_post_2_title.yaml
+    │   ├── 11/
+    │   └── 12/
+    ├── YYYY/
+    │   ├── MM/
+    │   │   └── MMDD_title.yaml
+    │   └── MM/
+    ├── HOWTO_POST
+    ├── example.yaml
+    └── yaml_parser.py
+
+格式可以直接複製目錄下的 `example.yaml` 來作編輯。
+
+編輯完成後，再用本目錄底下對應的社群平台 API 腳本檔進行發佈。 (TODO)
+
+
+# ----------------------------------------------------------------------------
+# 步驟
+# ----------------------------------------------------------------------------
+
+    1. 複製 `example.yaml` 進行編輯
+
+    2. commit 完後，作者向 upstream repo 請求 pull request
+
+    3. pull request 被 merged 後，由 repo 負責人執行 post_social.py，
+       發佈至各個社群平台 (TODO)
+
+NOTE:
+
+    這樣的流程可能會有點久，也許可以開放有社群權限的作者自行發佈文章。
+    （例：能取得 Python Taiwan FB Graph token 的作者）
+    如果文章有問題再拿掉就可以了。
+
+
+# ----------------------------------------------------------------------------
+# 發佈平台事項
+# ----------------------------------------------------------------------------
+
+現在鎖定的平台有：
+
+- Facebook Group: Python Taiwan
+  www.facebook.com/groups/pythontw
+
+- [Weekly Summary] PyTUG 網站
+  http://www.python.org.tw/
