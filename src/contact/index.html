@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block contact_class %}class="active"{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block content %}
+
+<form action="mailto:{{ site.email }}" method="GET">
+
+    <label>主旨</label>
+    <input name="subject" type="text" placeholder="{{ site.mail_example.subject }}"/>
+
+    <label>信件內容</label>
+    <textarea name="body" placeholder="{{ site.mail_example.content }}"></textarea>
+
+    <label></label>
+    <input type="submit" value="透過郵件軟體寄發" />
+</form>
+
+{% endblock %}
