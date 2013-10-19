@@ -1,0 +1,5 @@
+APP_ID = ''
+ENDPOINT = ''
+REDIRECT_URI = 'http://localhost:8080'
+ACCESS_TOKEN = None
+SCOPE = 'user_photos,email,user_birthday,user_online_presence,publish_stream,user_groups'
