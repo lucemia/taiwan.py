@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+    </body>
+    <script src="/jquery.js"></script>
+    <script type="text/javascript">
+        if(window.location.hash) {
+            var url = 'token' + window.location.hash;
+            url = url.replace('#', '')
+            $.get(url, function( data ) {
+                      });
+        } else {
+        }
+    </script>
+</html>
