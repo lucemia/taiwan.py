@@ -27,7 +27,7 @@ run by mynt
 `mynt serve build`
 
 
-run by appengine sdk
+upload to appengine
 
 1. `edit app.yaml with your appspot`
 2. `appcfg.py update .`
