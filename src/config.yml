@@ -57,3 +57,8 @@ mail_example:
         ' '
     content:
         ' '
+
+misaka:
+    extensions:
+        tables: True
+        superscript: True
